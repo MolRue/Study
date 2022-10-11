@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블을 만들고 쪼개고 나누고 합치고</title>
+    <style>
+        table{
+            text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <div style="width: 50%; float: left;">
+        <span>1.</span>
+        <table border="1" width="300" height="300">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+        </table>
+    </div>
+    <div style="width: 50%; float: right;">
+        <span>2.</span>
+        <table border="1" width="300" height="300">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td colspan="2">6</td>
+            </tr>
+            <tr>
+                <td colspan="2">7</td>
+                <td>8</td>
+            </tr>
+        </table>
+    </div>
+    <div style="width: 50%; float: left;">
+        <span>2.</span>
+        <table border="1" width="300" height="300">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td colspan="2">8</td>
+            </tr>
+            <tr>
+                <td colspan="2">9</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+    <div style="width: 50%; float: left;">
+        <span>3.</span>
+        <table border="1" width="300" height="300">
+            <tr>
+                <td colspan="3">1</td>
+            </tr>
+            <tr>
+                <td colspan="2">4</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <span>4.</span>
+        <table border="1" width="300" height="300">
+            <tr>
+                <td colspan="3">1</td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td colspan="2">8</td>
+
+            </tr>
+            <tr>
+                <td colspan="3">10</td>
+
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

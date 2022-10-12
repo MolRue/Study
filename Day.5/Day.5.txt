@@ -1,0 +1,338 @@
+CSS 속성!!!
+
+[속성]  >> [requierd]
+[속성 = 값] >> [target = _blank]
+
+
+포지션? 박스모델?
+
+절대크기?  > px
+- 말그대로 절대크기..
+- 픽셀? 화면에 보이는 점점점...으로 구성된것들! 화면을 구성하는 요소?
+
+상대크기?
+- % : 부모 태그, 폰트 사이즈가 기준이 된다! {주로 레이아웃 지정시 사용(width, height)}
+- em :  부모 태그, 폰트 사이즈가 기준이 된다. (주로 폰트사이즈)
+- rem : html 페이지 폰트 사이즈가 기준이 된다. (주로 폰트사이즈)
+
+lorem > 입력하면 이밋이 나오고..? 테스트코드 쓸때 편하다? 로렘입숨 이라고 그냥 라틴어로 주절주절. 의미는 없음
+
+폰트 패밀리
+
+p.a { font-family: "Times New Roman", Times, serif; }
+
+p.b { font-family: Arial, Helvetica, sans-serif; }
+
+- 폰트 여러개를 지정해둔다? 
+  : 지원되지 않는 폰트 대신 다른 폰트를 대신 출력해준다!
+  : 특히 외국어중에선 지원되지 않는 폰트가 있을 수 있어서
+- sans-serif or serif는 반드시 붙여라! (다국어 지원)
+
+폰트를 사용하는 방법??
+1.
+- 글꼴파일 자체를 받아서 html 파일에 지정하기 (최근에 무료글꼴로 법률이슈가 있엇던거 같은데?)
+- 보통은 확장자를 여러개 (브라우저마다 지원하는 확장자가 달라서.)
+- 서버에 폰트 파일을 저장해두고 사용하는 경우가 많다.
+
+    @font-face {
+      font-family: 'Ostrich';  /* 폰트 이름 */
+      src: local('Ostrich Sans'),
+            url('fonts/ostrich-sans-bold.woff') format('woff'), 
+            url('fonts/ostrich-sans-bold.ttf') format('truetype'), 
+            url('fonts/ostrich-sans-bold.svg') format('svg');
+    }
+
+::@font-face::로 정의
+src: local << 사용자 pc에 해당 폰트를 사용
+
+ 'Ostrich'; 이름을 이걸로 지정했으니 
+
+.wfont { font-family:  'Ostrich' , sans-serif; }  <<<이런식으로
+
+2.
+- 구글에서 제공하는 폰트 url을 받아서 쓴다.
+- language 지정을 해주자. (일부 폰트는 한국어가 지원되지 않아)
+- link로 넣는 방식 or import로 넣는 방식
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+  </style>
+
+
+컬러를 지정하는 방법
+1. 자동완성? 지정하는 방법 (but 보통은 디자이너들이 색상 코드를 지정해 주는경우가 많아서..... 직접쓰진 않아.)
+2. 헥사코드를 입력하는 방법 (6자리 이지만, 검정, 흰색 같이 6자리가 동일한 경우에는 3자리로 표기하기도 함)
+   - color: #000000
+3. hsla (hue, saturation, lightness, alpha) (체도, 명도, 밝기, 불투명도)
+   - color: hsla(15,95%,24%,1)
+   - 불투명도는 소수점으로 해도 되고 %로 해도 되더라.
+4. RGB (RGBA) (적, 녹, 청, 불투명도)
+   - color: rgba(1, 137, 181, 0.8)
+   - 적 녹 청 3색 배합으로 색상을 지정
+   - a는 똑같이 불투명도
+
+text-align 속성
+   - text-align: center;
+   - 텍스트를 정렬 (가운데정렬, 오른쪽 정렬 이런거)
+   - center : 가운데 정렬
+   - justify : 양쪽으로 정렬? (기본값)
+
+text-decoration
+   - 밑줄 긋거나 취소선 긋거나 윗줄 긋거나 이런거
+  <p style="text-decoration:none">none</p>
+  - 줄없음
+  <p style="text-decoration:underline">underline</p>
+  - 밑줄
+  <p style="text-decoration:overline">overline</p>
+  - 윗줄
+  <p style="text-decoration:line-through">line through</p>
+  - 중간줄 (or 취소선)
+
+text-shadow
+   - 텍스트에 그림자 효과를 추가
+   - text shadow generator 같은 사이트도 있음.
+    .shadow1 { color:red; text-shadow:1px 1px black; }
+     - 1px 바로 뒤로 얇게 그림자가 생긴다.
+    .shadow2 { text-shadow:5px 5px 3px #ffa500; }
+     - 3번째 px 영역은 번짐효과 영역.
+    .shadow3 { color:#fff; text-shadow:7px -7px 20px #000; }
+     - -7 같이 음수를 입력하면 글자 뒤에서 옆으로 그림자가 생긴다.
+
+spacing
+   - 글자 자간을 지정
+      .spacing1 { letter-spacing:0.2em; }  /* 글자 간격 0.2em */
+      .spacing2 { letter-spacing:0.5em; }  /* 글자 간격 0.5em */ 
+
+line-height
+   - 줄간격 지정
+    .small-line { line-height:0.7; }
+    .big-line { line-height:2.5; }
+
+   - 버튼 정렬할때도 사용된다.
+
+list-style
+   - list를 꾸밀때?
+    .book1 { list-style-type:none;  } 불릿 없앰 
+    .book2 { list-style-type: upper-alpha; }  알파벳 대문자  
+    .book3 { list-style-type: lower-alpha; }  알파벳 소문자  
+
+ul 에서 불릿(점)을 이미지로 사용할땐?
+    ul { list-style-image: url('images/dot.png') } >> 불릿으로 사용할 이미지 
+
+목록 들여쓰기
+  .inside { list-style-position: inside; }  /* 목록 들여쓰기 */
+   - 바깥 쓰기는 outside ( 기본값은 outside)
+
+table css
+    table { caption-side: bottom;  border:1px solid black; }
+              (↑ 표 캡션 위치 )       (↑ 표 테두리는 검은 색 실선으로 )
+    td, th { border:1px dotted black;    ( 셀 테두리는 검은 색 점선으로 )
+              padding:10px;                 ( 셀 테두리와 내용 사이의 여백 )
+              text-align:center;             ( 셀 내용 가운데 정렬 )
+             }
+
+{border-collapse: collapse;}   
+-테이블의 border는 보통 기본값이 2줄이라.... 한줄로 바꿔줄때 필요한 요소
+	table { caption-side: bottom;  /* 표 캡션 위치 */
+	        border:1px solid black;  /* 표 테두리는 검은 색 실선으로 */
+	        border-collapse: collapse;  /* 테두리 한줄로 표시 */
+	        }
+
+	td, th {border:1px dotted black;  /* 셀 테두리는 검은 색 점선으로 */
+	         padding:10px;  /* 셀 테두리와 내용 사이의 여백 */
+	         text-align:center;  /* 셀 내용 가운데 정렬 */
+	         }
+
+   -td, th를 지정하지 않을 경우, 테두리만 나온다!
+
+
+border-spacing
+   - table 안에서 각 칸당 간격 
+
+border-spacing 10px 50px;
+   - 가로10 세로 50px 만큼 띄어짐
+
+
+|||html css시험 문제는 게시판 만들기?|||
+문제1. 
+순서없는 목록의 불릿을 없앱니다.
+각 항목의 굴 간격을 글자크기의 2배로 지정합니다
+각항목에서 진하게 표시된 부분의 글자색을 #ad3000으로 수정합니다.
+
+문제3
+table태그에 포함된 border=1 속성을 삭제하세요
+표와 셀 테두리를 그린후 한줄로 합쳐 표시하세요
+표의 설명글ㅇ느 표 아래쪽에 표시하세요
+각셀에는 padding:10px 를 적용해 여백을 적절히두세요
+배경색을 #eee로 지정하는 클래스 선택자 .heading을 정의한 후 첫번쨰 행과 열에 적용하세요
+
+문제4
+h2제목 스타일은 글자색 #ff0000, 글자크기 1.5rm, 가운데정렬로 합니다.
+p본문 스탕리은 글자크기 1.2rem , 줄간격 2em , 굵은글자, 가운데정렬
+이름이 accent인 클래스 스타일을 글자색 #0000ff로 정의
+이름이 smalltext인 클래스를 글자크기 0.7em으로 정의
+span 태그로 묶은 '오후2시 이전' 과 '100%환불' 에 accent 클래스 스타일 적용
+span 태그로 묶은 '상담시간: ~공휴일 휴무' 에 smalltext 클래스 스타일을 적용
+
+
+블록태그
+   - 대표적으로 p태그.
+   - weith가 100%
+
+인라인 태그 
+   - 대표적으로 span태그
+   - 한 라인(한줄로??)으로 있다.
+
+block:
+  - margin과 padding을 자유롭게 지정할 수 있다.
+  - width, height 를 자유롭게 지정할 수 있다.
+  - div태그, 시멘틱 태그(레이아웃), p, h1~h6, table, ul, ol 태그 등등...
+
+inline:
+  - margin과 padding을 좌/우 만 지정할 수 있다.
+  - width, height 를 변경할 수 없다.
+  - a, img, span, button, textarea, select, input, label 태그 등등....
+
+inline-block:
+  - inline 태그처럼 한줄로 정렬이 되지만, block 태그의 특징을 사용할 수 있다.
+  
+span{display: inline-block;} >>> span태그를 block태그 취급할수 있게 해준다.
+
+{display: none;} > 화면에 표시되지 않게 해주는 태그
+
+
+box model??
+   - 웹문서의 형태를 박스형태로 구성??
+   - dif 태그는 대표적으로 box model을 만들기 위한 태그
+
+margin
+ - border를 기준으로 바깥쪽
+ - margin 여백 설정시 기입된 순서대로 시계방향 (상 우 하 좌) 순으로 적용된다
+   >>margin: 30px 10px 20px 50px
+ - 혹은 margin-top 이런식으로 직접 지정할수도 있다.
+ - padding 도 동일하게 설정한다.
+ - margin: 0 auto; <<< 많이 사용된다. (지정한 박스 안에서 가운데 정렬, 수평은 나중에 flex) 
+   <위 아래는 0, 좌우는 자동으로>
+ - margin overlap
+   margin 을 30px로 설정한 두 padding 사이의 거리는 60이 안되는 현상! (실제로는 30px)
+
+border
+ - 박스선 같은 것???
+ - 항상 border가 기준이 된다.
+
+padding
+ -border를 기준으로 안쪽
+
+contents
+ - 글자를 쓰거나 할수있는 영역.
+
+box-sizing
+ - content-box
+   : content영역을 기준으로 content영역만 영향을 준다.
+
+ - border-box
+  : border박스 영역을 기준으로 content + padding + border 영역을 포함해서 영향을 준다.
+  : 실질적으로 content 영역이 줄어든다.
+  : 동일한 크기로 설정된 border box 영역에 {box-sizing: border-box;} 태그를 넣은경우 박스가 작아보이고, content영역이 줄어든다.
+  : 경우에 따라서 쓰인다. ( border영역 신경안쓰고 margin영역만 신경쓸수 있으니까)
+
+box-shadow 
+ - 말그대로 box 에 그림자 효과를 추가한다.
+ - color를 지정하지 않을경우 검은색으로 나온다.
+ - box-shadow generator 를 제공하는 사이트가 있다.
+
+
+{border-style : }
+ - border 영역의 디자인을 지정할 수 있다.
+
+{border-width : }
+ - border영역의 크기를 지정할 수 있다.
+ - 그냥 써두면 상 우 하 좌 순(시계방향) 으로 크기가 설정된다.
+
+
+border-color : border 4방향의 색상 지정
+border-top-color
+border-right-color
+border-bottom-color
+border-left-color
+ : 각방향 색상 지정
+
+h1 {padding-bottom: 5px;
+     border-bottom: 3px solid rgb(75, 70, 70); }
+ : h1 요소에 아래쪽 테두리만 3px짜리 회색 실선
+
+p {padding: 10px;
+    border: 3px dotted blue; }
+ : 모든 테두리를 3px짜리 파란 점선
+
+{ border-radius: 25px;  }    
+ : border의 모든 꼭짓점을 둥글게 
+
+{ border-radius:50%; }   
+ : 테두리를 원으로
+
+
+브라우저 좌표
+ : 브라우저에서 왼쪽 최상단은 0,0 지점
+ : X축과 Y축으로 표기.
+
+뷰 포트 
+ : 브라우저에서 사용자가 볼수 있는 영역을 뜻함
+ : 뷰포트의 크기는 사용자의 pc사양이나 기기, 브라우저에 따라 다르다.
+
+포지션 
+
+left, right, top, bottom 으로부터 00px 이런식으로 위치를 조정할수 있다.
+
+
+pisition: static;
+ - 아무것도 적용되지 않은 기본 값
+ - 다른 포지션을 원래대로 돌릴때 사용함.
+
+pisition: relative;
+ - 뷰포트를 기준으로 위치를 정한다. (아마도 화면상 최외곽)
+ 
+
+pisition: absolute;
+ - relative만 쓸경우, 포지션을 뷰포트를 기준으로 한다.
+ - absolute는 부모의 relative 를 기준으로 자식(absolute)의 위치가 정해진다.
+ - 부모 태그에 반드시 relative를 해주어야 한다.
+ - 가끔 absolute만 단독으로 쓰는경우가 있기는 하지만 거~의없다고 한다.
+ - absolute는 바로 상위에 relative가 없다면, 더 상위에 있는 relative를 찾아서 기준으로 삼는다. (할아버지..?)
+ - relative를 포함한 부모태그에 height를 설정해 줘야 제대로 작동한다.
+ - relative를 가진 부모태그가 없을 경우엔, <html></html> 을 부모로 삼는다.
+
+
+pisition: fixed;
+ - 상단? 특정위치에 고정.
+ - 메뉴 만들때 주로 사용.
+
+
+z-index
+
+ div.child1 {
+            position: absolute;
+            top: 80px;
+            right: 150px;
+            width: 200px;
+            height: 100px;
+            background: salmon;
+            z-index: 2;
+             }
+
+ - z-index 속성을 추가하면 수치가 클 수록, 앞으로 온다! 
+ - 아마도 Z 축..? 
+ - position 이랑 flex 에만 사용된다. 
+
+
+float 
+
+ - 신문기사, 칼럼에 주로 사용됨. (다소 옛 방식의 레이아웃 작성법)
+ - 요즘에는 거의 flex를 많이 사용함.
+
+  img {
+      float:left;   ( 왼쪽에 떠 있게 오른쪽은 right; )
+      margin-right:40px;
+       }
+
+

@@ -1,0 +1,72 @@
+@charset "utf-8";  /* 캐릭터셋! 문자 깨짐 방지. 해주는게 좋다? */
+
+/* 초기화 코드 */
+
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+body{
+    background: #ccc;
+    padding: 20px;
+    }
+
+#signup {
+
+    }
+
+    /* ↓한칸 띄어두면 > 자식과 손주태그도 선택 */
+#signup fieldset {
+
+    }
+    
+    /* ↓제출버튼 */
+#signup fieldset:last-of-type {
+
+    }
+
+    /* ↓로그인 정보, 개인정보 */
+#signup legend {
+
+    }
+
+    /* ↓개인정보 li */
+#signup ul li {
+
+    }
+   
+    /* ↓label 요소 */
+#signup label {
+
+    }
+    
+    /* ↓제출버튼 */
+#signup button {
+
+    }
+
+#signup input[type=text], #signup input[type=password], 
+#signup input[type=tel] #signup input[type=email] {
+
+    }
+/* #signup input {} */
+/* ↑ 이게 틀린건 아니지만 너무 두리뭉실해 */
+
+#signup input[required] {
+    
+    }
+
+#signup input[readonly] {
+    
+    }
+
+/* ↓마우스 오버 올렸을때 */
+#signup button:hover {
+
+    }
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .heading {
+            background: #eee;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            caption-side: bottom;
+        }
+        /* , 하나 빼먹었다고 이런 재앙이!!!! */
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>이건 캡션입니다.</caption>
+        <col class="heading">
+        <col>
+        <col>
+        <thead>
+            <tr class="heading">
+                <th>구분</th>
+                <th>성인</th>
+                <th>독서자????</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>종이책</th>
+                <td>6.1권</td>
+                <td>11.8권</td>
+            </tr>
+            <tr>
+                <th>ㅇ</th>
+                <td>ㅇ</td>
+                <td>ㅇ</td>
+            </tr>
+            <tr>
+                <th>ㅇ</th>
+                <td>ㅇ</td>
+                <td>ㅇ</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -18,15 +18,15 @@
       background-color: #4cff00;
       border: 1px solid transparent;
       animation-name: shape;  /* 애니메이션 지정 */ ;
-      animation-duration: 3s;  /* 애니메이션 실행 시간 */
+      animation-duration: 1.5s;  /* 애니메이션 실행 시간 */
       animation-iteration-count: infinite;  /* 애니메이션 무한 반복 */
       animation-direction: reverse;  /*애니매니션이 종료한 뒤, 처음부터 시작할지, 역방향으로 진행할지 결정*/
     }
     #box2 {
       background-color: #8f06b0;
       border: 1px solid transparent;
-      animation-name: rotate, shape;  /* 애니메이션 지정 */
-      animation-duration: 3s;  /* 애니메이션 실행 시간 */
+      animation-name: rotate;  /* 애니메이션 지정 */
+      animation-duration: 1.5s;  /* 애니메이션 실행 시간 */
       animation-iteration-count: infinite;  /* 애니메이션 무한 반복 */
       animation-direction: reverse; 
     } 
@@ -43,7 +43,7 @@
 
     @keyframes rotate {  /* rotate 애니메이션 정의 */
       from {
-        transform:rotate(0deg)  /* 시작은 0도에서 */
+        transform: rotate(0deg)  /* 시작은 0도에서 */
       }
       to {
         transform: rotate(45deg);  /* 45도까지 회전 */

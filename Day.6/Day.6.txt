@@ -63,7 +63,7 @@ CSS 우선순위
 <style>
 	color: blue;
 	color: yellow;
-	collor: red;
+	color: red;
 </style>
 
  - 같은 색상 속성을 다같이 쓴경우 가장 마지막 속성이 적용된다
@@ -111,4 +111,166 @@ animation
  - from {	transform:rotate(0deg)  /* 시작은 0도에서 */ }
  - to {transform: rotate(45deg);  /* 45도까지 회전 */}
 
+
+
+flex 
+ - div들을 flex container로 묶어서?
+ - 
+ - 가로로 가는걸 주축
+ - 세로로 가는걸 교차축
+
+  .container { display: flex; }
+ - 플렉스 컨테이너 지정
+
+   #opt1{ flex-direction: row; }
+ - 왼쪽에서 오른쪽으로  
+   #opt2{ flex-direction: row-reverse; }  
+ - 오른쪽에서 왼쪽으로 
+   #opt3{ flex-direction: column; }
+ - 위에서 아래로
+   #opt4{ flex-direction: column-reverse; }
+ - 아래에서 위로           
+
+
+flex-wrap
+ - flex 요소들을 묶어줌
+ - nowrap : 기본값. wrap을 적용하지 않음. 화면 비율에 따라 width를 보호해주지 못함.
+ - wrap : 여러줄을 표시해줌. 
+ - wrap-reverse : wrap을 적용하는 동시에 내용물을 역순으로 정렬
+
+
+justify-content
+    #opt1{ justify-content: flex-start; }
+ - 주축 시작점 기준으로 배치 ,기본값 
+    #opt2{ justify-content: flex-end; }
+ -  주축 끝점 기준으로 배치 
+    #opt3{ justify-content: center;}  
+ -  주축 중앙 기준으로 배치
+    #opt4{ justify-content: space-between; }
+ -  시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 
+    #opt5{ justify-content: space-around; }
+ - 전체 항목을 같은 간격으로 배치 */ 
+
+
+
+align-items
+ : 교차축(새로)을 기준으로 정렬 
+    #opt1{align-items: flex-start; }
+ - 주축 시작점 기준으로 배치 */
+    #opt2{align-items: flex-end; }
+ - 주축 끝점 기준으로 배치 
+    #opt3{ align-items: center; }
+ -  주축 중앙 기준으로 배치 
+    #opt4{ align-items: baseline; }
+ -  문자 기준선에 맞춰 배치
+    #opt5{ align-items: stretch; }
+ -  항목을 늘려 교차축에 가득차게 배치 
+
+
+aligh-self 
+ : 교차축 정렬을 서로 다르게 하고 싶을때
+
+align-content
+ : 주축에서 줄바꿈이 생겼을때, flex 항목을 여러줄로 표시할 수 있다. 
+
+    #opt1{ align-content: flex-start; }
+ -  교차축 시작점 기준
+    #opt2{ align-content: flex-end; }
+ -  교차축 끝점 기준 
+    #opt3{ align-content: center; }
+ -  교차축 중앙 기준
+    #opt4{ align-content: space-between; }
+ -  시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치    
+    #opt5{ align-content: space-around; }
+ -  전체 항목을 같은 간격으로 배치     
+    #opt6{ align-content: stretch; }
+ -  항목을 늘려 교차축에 가득 차게 배치 
+
+
+반응형에서 유용한 단위
+
+ - %
+ - vw: 뷰포트의 width(10vw = 현재 뷰포트에서 10%)
+ - vh: 뷰포트의 height(10vw = 현재 뷰포트에서 10%)
+ - vmax: 뷰포트 너비와 높이 중에서 큰 값의 1%와 같음  (잘안씀)
+ - vmin: 뷰포트 너비와 높이 중에서 작은 값의 1%와 같음  (잘안씀)
+ - em: 부모태그를 기준으로 배율을 정함
+ - rem: <html></html>을 기준으로 배율을 정함
+ - calc: 계산기의 역할 (나중에)
+
+MAX, MIN 속성
+
+- max-width, max-height
+최대 너비(높이), 콘텐츠의 너비(높이)가 max-width보다 더이상 커지지 않음
+ - 최대 사이즈를 지정 (상한선)
+
+- min-width, min-height
+최소 너비(높이), 콘텐츠의 너비(높이)가 min-width보다 작아지면 더 이상 줄어들지 않음
+ - 최소 사이즈를 지정 (하한선)
+
+
+    /* body 안에 button 이 있으므로 body가 container가 된다. */
+    body {      
+      background: url('./images/bg.jpg') no-repeat left top fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+           }
+
+{flex: 1; }
+ - flex : 너비
+ - flex-basis
+ : 기본 크기 (flex만 써두면 너비를 설정.)
+ - flex-grow
+ : 컨테이너에 남는 공간이 있으면, 아이템의 flex-basis크기가 얼마나 더 할당 가능한지 나타내는 속성
+ - flex-shrink
+ : 컨테이너에 공간이 부족해지면, 아이템의 크기가 얼마나 더 줄어들 수 있는지를 지정해 주는 속성
+
+
+grid
+ - flex는 주축, 교차축 으로 구성되어 있으나, gird는 칸으로 구성되어 있다??
+ - row : 가로칸
+ - column : 세로칸
+
+    #wrapper{
+    display: grid;  /* 그리드 컨테이너 지정 */
+    grid-template-columns: 200px 200px 200px ;  /* 너비 200px 칼럼 3개 */
+    grid-template-rows: 100px 100px ;  /* 줄 높이 100px */
+               }
+
+- grid-template-columns
+ : 입력한 넓이의 갯수만큼 칼럼이 생성됨
+
+ - px로 입력시, 고정크기 : 브라우저나 화면크기에 상관없이 크기 고정
+ - fr로 입력시 비율에 따라 크기가 변경
+
+    #wrapper{
+    width: 600px;
+    display: grid;  /* 그리드 컨테이너 지정 */
+    grid-template-columns: repeat(3, 1fr);  /* 너비가 같은 칼럼 3개 */
+    grid-template-rows: minmax(100px, auto);  /* 줄 높이 최소값은 100px, 최대값은 자동 */
+    }
+
+   grid-column-gap:30px; 
+ : collumn 사이의 간격을 30px로 맞춘다.
+   grid-row-gap:20px;
+ : row 사이의 간격을 20px로 맞춘다.
+
+
+semantic태그
+ - 태그의 이름만 봐도 한눈에 알기 편하게 태그를 설정.
+ - div로만 짜두면 나중에 혼동이 올수도 있음.
+
+• 주로 쓰이는 시멘틱 태그
+ •<article>
+ •<aside>
+ •<footer>
+ •<header> 
+ •<main> 
+ •<nav> : 메뉴 태그
+ •<section> 
+ 
+ - article 태그는 반드시 section태그의 자손일 필요는 없음
 

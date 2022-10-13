@@ -1,1 +1,114 @@
-아몰랑이건 6일차에 할꺼야
+﻿day.6......
+
+
+
+float layout
+ - div태그로 boxing 하는거 신경쓰기.
+
+
+background img?
+
+ - div 에 background img 를 써서 배경을 넣는 경우
+ - 이미지 위에 글자 혹은 효과 등을 넣어야 할때 사용된다.
+
+img tag
+ - 단순하게 이미지만 올려 만들경우 <img src="" alt="">
+ - 단순한 애니메이션 효과는 줄수 있으나 글자를 삽입하거나 할 순 없다.
+ - 포토샵으로 글자가 삽입된 채로 만들어서 올리는 경우는 있다.
+
+background-repeat 
+ - 배경 이미지를 반복할 것인가? (바둑판식 정렬 같은 느낌)
+ - :no-repeat 
+
+background-position 
+ - 배경이미지의 위치를 설정할수 있다.
+ - 10% 40%; (X축, Y축)
+ - 350px 550px; (절대값으로도 설정 가능하다)
+
+background-attachment
+ - 배경이미지 고정
+
+ #bg1 { background-size:auto;}  
+ - 원래 배경 이미지 크기로 표시 
+  #bg2 { background-size:200px;}  
+ - 너비는 200px, 높이는 자동 계산 
+  #bg3 { background-size:50%;} 
+ - 배경 이미지 너비는 요소 너비의 50%, 높이는 자동 계산 
+  #bg4 { background-size:100% 100%;}  
+ - 배경 이미지 너비와 높이는 요소 너비의 100%, 요소 높이의 100%  
+  #bg5 { background-size:contain;}  
+ - 요소 안에 배경 이미지가 다 보이도록 표시 
+   #bg6 { background-size:cover;} 
+ - 요소를 완전히 덮도록 배경 이미지 표시 
+
+
+CSS 우선순위
+
+ - 인라인 스타일 > 내부스타일 > 외부스타일 > 브라우저 기본값
+> 요소 안에 스타일을 직접 지정
+> head 구역에 style을 직접 지정
+> 스타일 관련 css 시트를 따로 만들어서 링크로 지정
+> 스타일없는 브라우저의 기본값
+
+
+선택자 우선순위
+ - ID 선택자 > class 선택자 > 태그선택자
+
+{!important;}
+ - 모든 우선순위를 무시하고 해당 css를 우선적으로 적용한다.
+
+
+같은 속성을 적용할때
+
+<style>
+	color: blue;
+	color: yellow;
+	collor: red;
+</style>
+
+ - 같은 색상 속성을 다같이 쓴경우 가장 마지막 속성이 적용된다
+
+
+전체 태그와 해당 태그에 적용시
+
+ - 해당 태그 > 전체 태그
+
+
+transform (변형)
+ - 다소 가볍고 단순한 애니메이션
+
+transition (변환)
+ - 좀더 다양하고 깊이있는(?) 애니메이션 추가할수 있음.
+ - width, height 
+
+>transition-property
+ - 트랜지션의 대상을 지정
+ - 트렌지션을 지정함으로서 변화할 값. (width, height, background-color등 어떤것이 변화할 것인가)
+
+>transition-duration
+ - 트랜지션을 실행할 시간을 지정
+ - 이 애니메이션을 몇초(*s)동안 지정할 것인가?
+ - width는 몇초, height는 몇초. 이런식으로 따로따로 지정할수 있다.
+
+>transition-delay
+ - 트랜지션의 지연시간을 지정
+ - duration에서 지정한 시간중, 어떤것은 살짝 지연되서 시작하기 같은 설정을 지정할수 있다.
+
+>transition-timing-function
+ - 트랜지션의 실행상태를 지정 (실행되는 시간의 흐름? 빠르다가 늦는다던지)
+ - ease, ease-in, ease-out, ease-in-out, linear 
+ - cubic-bezier(.61, .30, .55, .30) 이런식으로 따로 설정할수도 있다.
+
+
+>transition 
+ - 4가지 속성을 한꺼번에 지정
+ - transition: 2s ease-in;  /* 대상: all, 시간:2초, 함수:ease-in */
+
+
+animation
+ - transform 이나 transittion 보다 더 풍부한 효과
+ - @Keyframes 애니매니션이 바뀌는 지점을 지정
+ - from {	transform:rotate(0deg)  /* 시작은 0도에서 */ }
+ - to {transform: rotate(45deg);  /* 45도까지 회전 */}
+
+

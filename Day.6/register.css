@@ -13,57 +13,82 @@ body{
     }
 
 #signup {
-
+    background-color: #fff;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
     }
 
     /* ↓한칸 띄어두면 > 자식과 손주태그도 선택 */
 #signup fieldset {
-
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
     }
     
-    /* ↓제출버튼 */
+    /* ↓제출버튼이 있는 필드셋 */
 #signup fieldset:last-of-type {
-
+    border: none;
     }
 
     /* ↓로그인 정보, 개인정보 */
 #signup legend {
-
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
     }
 
-    /* ↓개인정보 li */
+    /* ↓개인정보 li, 로그인정보 li */
 #signup ul li {
-
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    /* 앞부분은 위아래, 뒷부분은 양옆으로 */
+    margin-bottom: 2px;
     }
    
     /* ↓label 요소 */
 #signup label {
-
+    float: left;
+    font-size: 13px;
+    width: 110px
     }
     
     /* ↓제출버튼 */
 #signup button {
-
+    border: 1px solid #222;
+    border-radius: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 7px 25px;
+    display: block; /*button태그는 inline태그 라서 block태그로 바꿔줘야 한다. */
+    margin: 0 auto; /*가운데 정렬, block 태그에만 적용된다구? */
     }
 
 #signup input[type=text], #signup input[type=password], 
-#signup input[type=tel] #signup input[type=email] {
-
+#signup input[type=email], #signup input[type=tel] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
     }
 /* #signup input {} */
 /* ↑ 이게 틀린건 아니지만 너무 두리뭉실해 */
 
 #signup input[required] {
-    
+    border:  1px red solid;
     }
 
 #signup input[readonly] {
-    
+    border: none;
     }
 
 /* ↓마우스 오버 올렸을때 */
 #signup button:hover {
-
+    background: #222;
+    color: #fff;
     }
 
 

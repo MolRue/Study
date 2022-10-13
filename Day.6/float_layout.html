@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 962px;
+            margin: 0 auto;
+        }
+
+        #aside {
+            width: 200px;
+            height: 100%;
+            float: right;
+        }
+
+        .section {
+            width: 760px;
+            float: right;
+        }
+        
+        #wrap {
+            overflow: hidden;
+            /* overflow: hidden; > 내용물이 넘치면(화면을 넘어가면) 숨겨주는 기능 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 지금은 div로 했지만 sementic 태그를 더 많이 사용한다. -->
+    <div id="header">
+        <h1>Header</h1>
+    </div>
+    <div id="navigation">
+        <h1>Navigation</h1>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>aside</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aliquam. Sunt porro consequatur harum aut voluptates natus optio dolores odit dicta maiores nesciunt veritatis, quam fugit architecto sit tempore sed.
+            </p>
+        </div>
+        <div id="section1" class="section">
+            <h1>section1</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aliquam. Sunt porro consequatur harum aut voluptates natus optio dolores odit dicta maiores nesciunt veritatis, quam fugit architecto sit tempore sed.
+            </p>
+        </div>
+        <div id="section2" class="section">
+            <h1>setion2</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aliquam. Sunt porro consequatur harum aut voluptates natus optio dolores odit dicta maiores nesciunt veritatis, quam fugit architecto sit tempore sed.
+            </p>
+        </div>
+        <div id="section3" class="section">
+            <h1>section3</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, aliquam. Sunt porro consequatur harum aut voluptates natus optio dolores odit dicta maiores nesciunt veritatis, quam fugit architecto sit tempore sed.
+            </p>
+        </div>
+        <div id="footer">
+             <h1>Footer</h1>
+       </div>
+</body>
+</html>

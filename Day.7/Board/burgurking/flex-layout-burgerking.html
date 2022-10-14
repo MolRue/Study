@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>Document</title>
+<!-- https://www.starbucks.co.kr/index.do -->
+<style>
+*{margin:0; padding:0;}
+a { text-decoration: none !important; }
+img { border: 0; }
+ul { list-style: none; }
+
+header, footer, section {
+	box-sizing:border-box;
+}
+
+.wrap{
+	background: wheat;
+}
+
+/* 모바일: 0~766px */
+.header{
+
+}
+
+.header__nav {
+	max-width: 1200px;
+	background:#9de25c;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.header__nav > h1{
+	width: 100px;
+	height: 120px;
+	background:#9de25c;
+}
+
+.header__nav > nav{
+	/* 1100px ÷ 1200px */
+	width: calc(100% - 100px);
+	background:#ff6b57;
+	height: 120px;
+}
+
+.header__nav > nav > ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.header__nav > .delivery-order {
+	width: 168px;
+}
+
+section .con {
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.slider{
+	height: 480px;
+}
+
+.slider__content {
+	background: thistle;
+}
+
+.youtube{
+	height: 605px;
+}
+
+.youtube__content {
+	background:tomato;
+}
+
+.sns{
+	height: 160px;
+}
+
+.sns__content {
+	background: turquoise;
+}
+
+.sns__content > ul {
+	display: flex;
+	flex-direction: row;
+}
+
+.sns__content > ul > li {
+	flex: 1;
+	text-align: center;
+}
+
+.guide{
+	height: 480px;
+}
+
+.guide__content {
+	display: flex;
+	/* flex-direction: row; */
+	flex-direction: column;
+	/* background: yellowgreen; */
+}
+
+.guide__content > div {
+	flex: 1;
+	text-align: center;
+}
+
+.guide__content > .content__app {
+	background: hotpink;
+}
+
+.guide__content > .content__delivery {
+	background:indianred;
+}
+
+.store{
+	height: 597px;
+}
+
+.store__content {
+	background: honeydew;
+}
+
+.store__content ul {
+	/* display: flex;
+	flex-direction: row;
+	justify-content: space-around; */
+	overflow: hidden;
+	/* 1144 ÷ 1440 */
+	width: 79.44%;
+	margin: 0 auto;
+}
+
+.store__content ul li {
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+
+.banner{
+	height: 200px;
+}
+
+.banner__content {
+	background: gray;
+}
+
+.footer{
+	height:680px;
+	background:#474747;
+}
+
+
+/* 테블릿: 767px 이상*/
+@media all and (min-width:767px){
+	.guide__content {
+		flex-direction: row;
+	}
+
+	.guide__content > .content__app {
+		
+	}
+
+	.guide__content > .content__delivery {
+		
+	}
+
+	.store__content ul li {
+		width: 16.66%;
+	}
+}
+
+/* pc: 1024px 이상 */
+@media all and (min-width:1024px){ 
+
+}
+
+</style>
+</head>
+<body>
+	<header class="header">
+		<div class="header__nav">
+			<h1>logo</h1>
+			<nav>
+				<ul>
+					<li>메뉴소개</li>
+					<li>매장소개</li>
+					<li>이벤트</li>
+					<li>브랜드스토리</li>
+				</ul>
+			</nav>
+			<div class="delivery-order">딜리버리 주문</div>
+		</div>
+	</header>
+	<div class="wrap">
+		<section class="slider">
+			<div class="slider__content con">
+				<!-- <img src="./img/slider.png" alt="" srcset=""> -->
+			</div>
+		</section>
+		<section class="youtube">
+			<div class="youtube__content con"></div>
+		</section>
+		<section class="sns">
+			<div class="sns__content con">
+				<ul class="content__list">
+					<li>youtube</li>
+					<li>facebook</li>
+					<li>instgram</li>
+				</ul>
+			</div>
+		</section>
+		<section class="guide">
+			<div class="guide__content con">
+				<div class="content__app">app</div>
+				<div class="content__delivery">deli</div>
+			</div>
+		</section>
+		<section class="store">
+			<div class="store__content con">
+				<div>매장찾기</div>
+				<ul>
+					<li>딜리버리</li>
+					<li>킹오더</li>
+					<li>드라이브 스루</li>
+					<li>24시간</li>
+					<li>아침메뉴</li>
+					<li>주차공간</li>
+				</ul>
+			</div>
+		</section>
+		<section class="banner">
+			<div class="banner__content con"></div>
+		</section>
+	</div>
+	<footer class="footer"></footer>
+</body>
+</html>

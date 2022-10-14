@@ -30,14 +30,19 @@ background-attachment
 
  #bg1 { background-size:auto;}  
  - 원래 배경 이미지 크기로 표시 
+
   #bg2 { background-size:200px;}  
  - 너비는 200px, 높이는 자동 계산 
+
   #bg3 { background-size:50%;} 
  - 배경 이미지 너비는 요소 너비의 50%, 높이는 자동 계산 
+
   #bg4 { background-size:100% 100%;}  
  - 배경 이미지 너비와 높이는 요소 너비의 100%, 요소 높이의 100%  
+
   #bg5 { background-size:contain;}  
  - 요소 안에 배경 이미지가 다 보이도록 표시 
+
    #bg6 { background-size:cover;} 
  - 요소를 완전히 덮도록 배경 이미지 표시 
 
@@ -124,10 +129,13 @@ flex
 
    #opt1{ flex-direction: row; }
  - 왼쪽에서 오른쪽으로  
+
    #opt2{ flex-direction: row-reverse; }  
  - 오른쪽에서 왼쪽으로 
+
    #opt3{ flex-direction: column; }
  - 위에서 아래로
+
    #opt4{ flex-direction: column-reverse; }
  - 아래에서 위로           
 
@@ -142,27 +150,36 @@ flex-wrap
 justify-content
     #opt1{ justify-content: flex-start; }
  - 주축 시작점 기준으로 배치 ,기본값 
+
     #opt2{ justify-content: flex-end; }
  -  주축 끝점 기준으로 배치 
+
     #opt3{ justify-content: center;}  
  -  주축 중앙 기준으로 배치
+
     #opt4{ justify-content: space-between; }
  -  시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 
+
     #opt5{ justify-content: space-around; }
- - 전체 항목을 같은 간격으로 배치 */ 
+ - 전체 항목을 같은 간격으로 배치 
 
 
 
 align-items
  : 교차축(새로)을 기준으로 정렬 
+
     #opt1{align-items: flex-start; }
- - 주축 시작점 기준으로 배치 */
+ - 주축 시작점 기준으로 배치 
+
     #opt2{align-items: flex-end; }
  - 주축 끝점 기준으로 배치 
+
     #opt3{ align-items: center; }
  -  주축 중앙 기준으로 배치 
+
     #opt4{ align-items: baseline; }
  -  문자 기준선에 맞춰 배치
+
     #opt5{ align-items: stretch; }
  -  항목을 늘려 교차축에 가득차게 배치 
 

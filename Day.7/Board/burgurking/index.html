@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<title>버거킹</title>
+<!--Open Graph-->
+<!--http://ogp.me/-->
+<!-- https://velog.io/@byeol4001/Meta-Tag-OG%EC%98%A4%ED%94%88%EA%B7%B8%EB%9E%98%ED%94%84-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Burgurking" />
+<meta property="og:title" content="Burgurking" />
+<meta property="og:description" content="버거킹! 이것이 운명적 와퍼, 앵그리 트러플 와퍼 출시!" />
+<meta property="og:image" content="./img/logo.gif" />
+<meta property="og:url" content="https://www.burgerking.co.kr/" />
+
+<!--Twitter Card-->
+<!--https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started-->
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="Burgurking" />
+<meta property="twitter:title" content="Burgurking" />
+<meta property="twitter:description" content="버거킹! 이것이 운명적 와퍼, 앵그리 트러플 와퍼 출시!" />
+<meta property="twitter:image" content="./img/logo.gif" />
+<meta property="twitter:url" content="https://www.burgerking.co.kr/" />
+
+<!-- 파비콘 -->
+<!-- https://www.favicon-generator.org/ -->
+<!-- https://hongpage.kr/28 -->
+<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- css -->
+<link rel="stylesheet" href="./library/fontawesome-free-5.15.3-web/css/all.min.css">
+<link rel="stylesheet" href="./library/swiper5/swiper.css">
+<link rel="stylesheet" href="./library/animate/animate.css">
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header__Mnav animate__animated animate__slideInLeft">
+			<div class="trigger">
+				<button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
+			</div>
+			<nav class="Mmenu">
+				<ul class="Mmenu__main">
+					<li onclick="showHide(this)">
+						<span>메뉴소개</span>
+						<span><i class="fas fa-chevron-right"></i></span>
+						<ul class="Mlist__drop animate__animated animate__fadeIn">
+							<li><a href="#">스페셜&할인팩</a></li>
+							<li><a href="#">프리미엄</a></li>
+							<li><a href="#">와퍼</a></li>
+							<li><a href="#">주니어&버거</a></li>
+							<li><a href="#">올데이킹&치킨버거</a></li>
+							<li><a href="#">사이드</a></li>
+							<li><a href="#">음료&디저트</a></li>
+							<li><a href="#">독퍼</a></li>
+						</ul>
+					</li>
+					<li onclick="showHide(this)">
+						<span>매장소개</span>
+						<span><i class="fas fa-chevron-right"></i></span>
+						<ul class="Mlist__drop animate__animated animate__fadeIn">
+							<li><a href="#">매장찾기</a></li>
+						</ul>
+					</li>
+					<li onclick="showHide(this)">
+						<span>이벤트</span>
+						<span><i class="fas fa-chevron-right"></i></span>
+						<ul class="Mlist__drop animate__animated animate__fadeIn">
+							<li><a href="#">이벤트</a></li>
+							<li><a href="#">신규매장</a></li>
+						</ul>
+					</li>
+					<li onclick="showHide(this)">
+						<span>브랜드스토리</span>
+						<span><i class="fas fa-chevron-right"></i></span>
+						<ul class="Mlist__drop animate__animated animate__fadeIn">
+							<li><a href="#">버거킹 스토리</a></li>
+							<li><a href="#">WHY 버거킹</a></li>
+							<li><a href="#">버거킹 NEWS</a></li>
+						</ul>
+					</li>
+					<li onclick="showHide(this)">
+						<span>고객센터</span>
+						<span><i class="fas fa-chevron-right"></i></span>
+						<ul class="Mlist__drop animate__animated animate__fadeIn">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">버거킹 앱이용안내</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="header__nav">
+			<div class="trigger">
+				<button class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></button>
+			</div>
+			<h1>
+				<a href="./index.html"><img src="./img/logo.gif" alt="로고" class="logo"></a>
+			</h1>
+			<div class="menu">
+				<nav>
+					<ul class="menu__main">
+						<li class="main__list">
+							<a href="#">메뉴소개 <i class="fas fa-caret-down"></i></a>
+							<div>
+								<ul class="list__drop animate__animated animate__fadeIn">
+									<li><a href="#">스페셜&할인팩</a></li>
+									<li><a href="#">프리미엄</a></li>
+									<li><a href="#">와퍼</a></li>
+									<li><a href="#">주니어&버거</a></li>
+									<li><a href="#">올데이킹&치킨버거</a></li>
+									<li><a href="#">사이드</a></li>
+									<li><a href="#">음료&디저트</a></li>
+									<li><a href="#">독퍼</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="main__list">
+							<a href="#">매장소개 <i class="fas fa-caret-down"></i></a>
+							<div>
+								<ul class="list__drop animate__animated animate__fadeIn">
+									<li><a href="#">매장찾기</a></li>
+								</ul>	
+							</div>
+						</li>
+						<li class="main__list">
+							<a href="#">이벤트 <i class="fas fa-caret-down"></i></a>
+							<div>
+								<ul class="list__drop animate__animated animate__fadeIn">
+									<li><a href="#">이벤트</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="main__list">
+							<a href="#">브랜드스토리 <i class="fas fa-caret-down"></i></a>
+							<div>
+								<ul class="list__drop animate__animated animate__fadeIn">
+									<li><a href="#">버거킹 스토리</a></li>
+									<li><a href="#">WHY 버거킹</a></li>
+									<li><a href="#">버거킹 NEWS</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+				<div class="delivery-order">
+					<button class="button button--shape-red">딜리버리 주문</button>
+				</div>
+			</div>
+		</div>
+		<div class="header__panel"></div>
+	</header>
+	<div class="wrap">
+		<section class="slider">
+			<div class="slider__content con">
+				<div class="swiper-container main-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slide1"></div>
+						<div class="swiper-slide slide2"></div>
+						<div class="swiper-slide slide3"></div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					    <!-- Add Pagination -->
+    				<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="youtube">
+			<div class="youtube__content con">
+				<!-- 유효성 검사 후 <iframe frameborder="0" … /> ->  style="border:0;" 수정 -->
+				<iframe height="605" src="https://www.youtube.com/embed/oDiBd7QpBFY" title="YouTube video player" style="border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</section>
+		<section class="sns">
+			<div class="sns__content con">
+				<ul class="content__list">
+					<li>
+						<a href="#">
+							<div class="icon">
+								<i class="fab fa-youtube-square"></i>
+							</div>
+							<div class="sns-txt">
+								<span>YOUTUBE</span>
+								<span class="button--shape-white"><i class="fab fa-youtube"></i> 구독 4.9만</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="icon">
+								<i class="fab fa-facebook-square"></i>
+							</div>
+							<div class="sns-txt">
+								<span>FACEBOOK</span>
+								<span class="button--shape-white"><i class="fas fa-thumbs-up"></i> 좋아요 47.8만</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="icon">
+								<i class="fab fa-instagram"></i>
+							</div>
+							<div class="sns-txt">
+								<span>INSTAGRAM</span>
+								<span class="button--shape-white"><i class="fas fa-user"></i> 팔로워 74.9k</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="guide">
+			<div class="guide__content con">
+				<div class="content__app"></div>
+				<div class="content__delivery"></div>
+			</div>
+		</section>
+		<section class="store">
+			<div class="store__content con">
+				<div class="search">
+					<h2>매장찾기</h2>
+					<p>고객님 주변에 있는 버거킹을 찾아보세요!</p>
+					<p>
+						<button class="button button--shape-red">매장찾기</button>
+					</p>
+					<ul>
+						<li>
+							<img src="./img/icon1.gif" alt="딜리버리">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>딜리버리</em> 
+						</li>
+						<li>
+							<img src="./img/icon2.gif" alt="킹오더">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>킹오더</em>
+						</li>
+						<li>
+							<img src="./img/icon3.gif" alt="드라이브 스루">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>드라이브 스루</em>
+						</li>
+						<li>
+							<img src="./img/icon4.gif" alt="24시간">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>24시간</em>
+						</li>
+						<li>
+							<img src="./img/icon5.gif" alt="아침메뉴">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>아침메뉴</em>
+						</li>
+						<li>
+							<img src="./img/icon6.gif" alt="주차공간">
+							<p class="search-txt">집에서 편안하게<br />받을 수 있는</p>
+							<em>주차공간</em>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="banner">
+			<div class="banner__content con">
+				<div class="order-text">
+					<h1>집에서 만나는 버거킹</h1>
+					<br />
+					<p>딜리버리 전화주문 안내 10:00–22:00</p>
+					<p>연중무휴 (매장별로 상이할 수 있습니다.)</p>
+				</div>
+				<p class="phone"><i class="fas fa-phone-volume"></i> 1599-0505</p>
+			</div>
+		</section>
+	</div>
+	<footer class="footer">
+		<div class="footer__level1">
+			<ul class="sitemap">
+				<li>
+					<a href="#" class="top">메뉴</a>
+					<ul class="sitemap__list">
+						<li><a href="#">스페셜&할인팩</a></li>
+						<li><a href="#">프리미엄</a></li>
+						<li><a href="#">와퍼</a></li>
+						<li><a href="#">주니어&버거</a></li>
+						<li><a href="#">올데이킹&치킨버거</a></li>
+						<li><a href="#">사이드</a></li>
+						<li><a href="#">음료&디저트</a></li>
+						<li><a href="#">독퍼</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="top">매장</a>
+					<ul class="sitemap__list">
+						<li><a href="#">매장찾기</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="top">이벤트</a>
+					<ul class="sitemap__list">
+						<li><a href="#">이벤트</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="top">브랜드 스토리</a>
+					<ul class="sitemap__list">
+						<li><a href="#">버거킹 스토리</a></li>
+						<li><a href="#">WHY 버거킹</a></li>
+						<li><a href="#">버거킹 News</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="top">고객센터</a>
+					<ul class="sitemap__list">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">버거킹앱이용안내</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">문의</a></li>
+						<li><a href="#">가맹점 모집</a></li>
+						<li><a href="#">인재채용</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer__level2">
+			<div>
+				<div class="private-line">
+					<ul>
+						<li class="font--gothic">이용약관</li>
+						<li class="font--gothic">개인정보취급방침</li>
+						<li class="font--gothic">법적고지</li>
+					</ul>
+					<div class="button-line">
+						<button class="button--shape-beige">인재채용</button>
+						<button class="button--shape-beige">가맹점 모집</button>
+					</div>
+				</div>
+				<div class="address-line">
+					<h2><img src="./img/footer_logo.png" alt="하단로고"></h2>
+					<p class="font--gothic">서울 종로구 삼봉로 71 G 타워 2층 주식회사 비케이알│전화주문 1599-0505</p>
+					<p class="font--gothic">사업자 등록번호 101-86-76277│(주)BKR 대표이사 문영주</p>
+					<p class="font--gothic"> Copyright 2019 BKR Co., Ltd. All right Reserved</p>
+					<div>
+						<i class="fab fa-facebook-square"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- script -->
+	<script src="./library/swiper5/swiper.min.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>

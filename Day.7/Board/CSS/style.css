@@ -151,7 +151,7 @@ color: #fff;
 .board_write .info {
     border-top: 1px dashed #ddd;
     border-bottom: 1px solid #000;
-    font-size: 0;
+    /* font-size: 0; */
 }
 
 .board_write .title dl {
@@ -266,3 +266,82 @@ color: #fff;
     line-height: 160%;
     font-size: 1.4rem;
 }
+
+
+/* 768 ~ 1000 */
+
+@media all and (max-width: 1000px) {
+    .wrap {
+        width: 100vw;
+    }
+}
+
+/* 0 ~ 767px */
+
+@media all and (max-width: 767px) {
+    /* ↓ 여기서부터 */
+    .wrap {
+        width: 95vw;
+        /* 뷰포트 기준으로 95% */
+        /* media query 에서는 위에 중복되는 내용은 다시안써도됨 */
+    }
+
+    .board_list th:nth-of-type(1),
+    .board_list td:nth-of-type(1) {
+        display: none;
+    
+    }
+    .board_list th:nth-of-type(3),
+    .board_list td:nth-of-type(3) {
+        display: none;
+    }
+
+    .board_list th:nth-of-type(4),
+    .board_list td:nth-of-type(4) {
+        display: none;
+    }
+
+    /* ↑ 여기까지 시험 */
+    .board_wrap {
+        width: 100vw;
+    }
+
+    .board_write .title dt {
+        width: 70px;
+    }
+
+    .board_write .info dt {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    
+
+    .board_write .title input[type="text"] {
+        width: 100%        
+    }
+    .board_write .info input[type="text"],
+    .board_write .info input[type="password"] {
+        width: 80%        
+    }
+
+    .board_view .info dl {
+        padding:0 10px;
+    }
+
+    .board_view .info dl dt,
+    .board_view .info dl dd {
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    .board_view .info dl::before {
+        display: none;
+    }
+
+    .board_view .info dl:nth-of-type(1),
+    .board_view .info dl:nth-of-type(3) {
+        display: none;
+    }
+}
+

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    /* ↓ 초기화 태그 */
+    * {
+        margin:0;
+        padding: 0;
+    }
+
+    a {text-decoration: none !important;}
+    img {border: 0;}
+    /* ↓ padding 이랑 boder를 같이 이동하기 위함 */
+    header, footer, section { box-sizing: border-box;}
+
+    .wrap {
+        background: wheat;
+    }
+
+    /* 반응형 사이즈 분리, 반응형 작성시 기본값을 지정한다. */
+    /* 기본값을 기준으로 media query를 작성하니까.. */
+    /* ↓ 0~766 px */
+    .header__nav {
+        max-width: 1200px;
+        /* 1200px이상으로 커지지 않는다. */
+        background: #9de25c;
+        margin: 0 auto;
+        display: flex;
+        /* ↓ 기본값...이지만 명시해둔것! */
+        flex-direction: row;
+    }
+
+    .header__nav > h1 {
+        width: 100px;
+        height: 120px;
+    }
+
+    .header__nav > nav {
+        width: calc(100% - 100px);
+        background: #ff6b57;
+        height: 120px;
+    }
+
+    .header__nav > nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .header__nav > .delivery-order {
+        width: 168px;
+    }
+
+    section .con {
+        max-width: 1440px;
+        margin: 0 auto;
+        height: 100%;
+    }
+    
+    .slider {
+        height: 480px;
+
+    }
+
+    .slider__content {
+        background: thistle;
+    }
+
+    .youtube {
+        height: 605px;
+    }
+
+    .youtube__content {
+        background: tomato;
+    }
+    
+    .sns {
+        height: 160px;
+    }
+
+    .sns__content {
+        background: turquoise;
+    }
+
+    .sns__content  > ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sns__content > ul > li {
+        flex: 1;
+        /* width: 33.33%; */
+        text-align: center;
+    }
+
+    .guide {
+        height: 480px;
+    }
+
+    .guide__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .guide__content > div {
+        flex: 1;
+        /* 오타였다고 한다. float(X) → flex(O) */
+        text-align: center;
+    }
+
+    .guide__content > .content__app {
+        background: hotpink;
+    }
+
+    .guide__content > .content__delivery {
+        background: indianred;
+    }
+
+    .store {
+        height: 597px;
+    }
+
+    .store__content {
+        background: honeydew;
+    }
+
+    .store__content ul {
+        /* ★ float 태그를 쓰는경우 부모태그에 overflow:hidden; 을 줘야한다ㅣ */
+        overflow: hidden;
+        /* ↓ 1144 ÷ 1440 */
+        width: 79.44%;
+        margin: 0 auto;
+    }
+
+    .store__content li {
+        float: left;
+        /* ↑↓ float랑 width비율로 2행 3열 만들기 */
+        width: 33.33%;
+        text-align: center;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner__content {
+        background: gray;
+    }
+
+    .footer {
+        height: 680px;
+        background: #474747;
+    }
+
+    /* ↓ 767~1023 px */
+    @media all and (min-width:767px) {
+        .guide__content {
+            flex-direction: row;
+        }
+
+        .store__content ul li {
+            width: 16.66%;
+        }
+    }
+
+    /* ↓ 1024 px 이상 */
+    @media all and (min-width:1024px) {
+
+    }
+
+    </style>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header__nav">
+            <h1>logo</h1>
+            <nav>
+                <ul>
+                    <li>메뉴소개</li>
+                    <li>매장소개</li>
+                    <li>이벤트</li>
+                    <li>브랜드스토리</li>
+                </ul>
+            </nav>
+            <div class="delivery-order">딜리버리 주문</div>
+        </div>
+    </header>
+    <main class="wrap">
+        <section class="slider">
+            <div class="slider__content con"></div>
+        </section>
+        <section class="youtube">
+            <div class="youtube__content con"></div>
+        </section>
+        <section class="sns">
+            <div class="sns__content con">
+                <ul class="content__list">
+                    <li>youtube</li>
+                    <li>facebook</li>
+                    <li>instagram</li>
+                </ul>
+            </div>
+        </section>
+        <section class="guide">
+            <div class="guide__content con">
+                <div class="content__app">
+                    app
+                </div>
+                <div class="content__dilivery">
+                    dili
+                </div>
+            </div>
+        </section>
+        <section class="store">
+            <div class="store__content con">
+                <div>매장찾기</div>
+                <ul>
+                    <li>딜리버리</li>
+                    <li>킹오더</li>
+                    <li>드라이브스루</li>
+                    <li>24시간</li>
+                    <li>아침메뉴</li>
+                    <li>주차공간</li>
+                </ul>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="banner__content con"></div>
+        </section>
+    </main>
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>

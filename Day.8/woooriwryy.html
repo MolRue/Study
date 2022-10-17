@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header, section, footer {
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            background: skyblue;
+        }
+
+        /* header */
+
+        .header__nav {
+            margin: 0 auto;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: row;
+        }
+        .header h1 {
+            width: 150px;
+            height: 66px;
+            text-align: center;
+        }
+
+        .header__nav nav {
+            background: darkblue;
+            color: aliceblue;
+            width: calc(100% - 200px);
+            height: 66px;
+        }
+
+        .header__nav .search {
+            width: 100px;
+            height: 66px;
+        }
+
+        .header__nav nav ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        /* main */
+
+        .wrap  {
+            max-width: 1440;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        section .menu {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slider {
+            height: 480px;
+        }
+
+        .slider__content {
+            height: 100%;
+            background: greenyellow;
+        }
+
+        .main__menu {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .mid__menu {
+            position: relative;
+            top: -38px;
+        }
+        
+        .mid__menu__con {
+            background: gray;
+            margin: 0 auto;
+            height: 76px;
+            overflow: hidden;
+            left: -50%;
+            z-index: 99;
+        }
+
+        .mid__menu ul {
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__nav">
+            <h3>은행로고 & 로그인</h3>
+            <nav>
+                <ul>
+                    <li>개인</li>
+                    <li>기업</li>
+                    <li>마이데이터</li>
+                    <li>자산관리</li>
+                    <li>금융상품</li>
+                    <li>카드</li>
+                    <li>제휴제안</li>
+                    <li>전체메뉴</li>
+                    <li>Global</li>
+                </ul>
+            </nav>
+            <div class="search">사이트내 검색</div>
+        </div>
+    </header>
+    <div class="wrap">
+        <section class="slider">
+            <div class="slider__content"></div>
+        </section>
+        <section class="mid__menu">
+            <div class="mid__menu__con">
+                <ul>
+                    <li>다른금융정보조회</li>
+                    <li>조회</li>
+                    <li>이체</li>
+                    <li>환율</li>
+                    <li>빠른메뉴</li>
+                </ul>
+            </div>
+        </section>
+        <section class="sub__menu">
+            <ul class="sub__menu__con">
+                <li>금융 소비자 보호</li>
+                <li>보안뉴스</li>
+                <li>상품/약관 공시</li>
+            </ul>
+        </section>
+        <section class="menu__left">
+            <h2>금융상품</h2>
+            <ul>
+                <li>예금</li>
+                <li>대출</li>
+                <li>펀드</li>
+                <li>외환</li>
+                <li>신탁</li>
+                <li>퇴직연금</li>
+                <li>보험</li>
+                <li>ISA</li>
+        </ul>
+        </section>
+        <section class="menu__right">
+            <h2>카드</h2>
+            <ul>
+                <li>카드신청</li>
+                <li>나의카드</li>
+                <li>이벤트</li>
+            </ul>
+        </section>
+        <section class="menu__side">
+            <h2>서비스</h2>
+            <ul>
+                <li>one뱅킹 이미지</li>
+                <li>마이데이터 이미지</li>
+                <li>스마트간편신규 이미지</li>
+            </ul>
+        </section>
+        <section class="news">
+            <div class="news__left">
+                <h2>새소식</h2>
+                <ul>
+                    <li>채용공지</li>
+                    <li>covid19영업지침</li>
+                    <li>수신상품 판매중단안내</li>
+                </ul>
+            </div>
+            <div class="news__right">
+                <h2>이벤트</h2>
+                <ul>
+                    <li>won뱅킹 신규서비스</li>
+                    <li>첫적금event</li>
+                    <li>우리직정인셀럽</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+        <ul>
+            <li>은행소개</li>
+            <li>영업점안내</li>
+            <li>고객광장</li>
+            <li>개인정보처리방침</li>
+            <li>신용정보활용체제</li>
+            <li>개인정보관리보호</li>
+            <li>사고신고</li>
+            <li>전자민원접수</li>
+            <li>보호금융상품등록부</li>
+            <li>상품공시실</li>
+            <li>보안센터</li>
+            <li>웹접근성이용안내</li>
+        </ul>
+    </footer>
+</body>
+</html>

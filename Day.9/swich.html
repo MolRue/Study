@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = Number (prompt('숫자를 입력하시오',0))
+
+        switch (input % 2) {
+            case 0:
+            alert('짝수입니다.');
+            break;
+            
+            case 1:
+            alert('홀수입니다.');
+            break;
+
+            default:
+            alert ('숫자가 아닙니다.');
+            break;
+            }
+
+        // 계산된 값이 value로 간다.
+        // default는 생략해도 작동한다.
+        // break; : 수식이 맞아 떨어질경우, 빠져나온다?!
+
+
+        // const str = "국어";
+
+        // switch (str) {
+        //     case "수학":
+        //         alert ('수학입니다.');
+        //         break;
+        
+        //     case "국어":
+        //         alert ('국어입니다.');
+        //         break;
+           
+        //     case "영어":
+        //         alert ('영어입니다.');
+        //         break;
+        //     default:
+        //         break;
+        //     }
+
+        // const num = 5;
+        // const result = ( num >= 0 ) ? '0이상의 숫자입니다.' : '0보다 작은 숫자입니다.';
+        // alert(result);
+        
+        // 조건식 ? '참일떄 결과' : '거짓일때 결과'
+        // 조건식이 참일 경, 콜론 앞에 코드를 실행. 거짓일경우, 콜론 뒤에 코드를 실행.
+    </script>
+</body>
+</html>

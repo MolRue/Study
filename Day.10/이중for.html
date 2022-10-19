@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let output = '';
+
+        for (let i = 0; i < 10; i++) {    //행
+            for (let j = 0; j < i; j++){  //열
+            output += '*'
+            }
+            output += '\n'  // 줄바꿈
+        }                                // 10행 7열
+
+        // for (let i = 0; i < 10; i++) {    //행
+        //     for (let j = 0; j < 7; j++){  //열
+        //     output += '*'
+        //     }
+        //     output += '\n'  // 줄바꿈
+        // }                                // 10행 7열                           
+
+        console.log(output)
+    </script>
+</body>
+</html> 

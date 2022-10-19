@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for 문</title>
+</head>
+<body>
+    <script>
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i); 
+        // }
+        
+        // let sum = 0;  // 0~100 까지 합계를 구하는 공식
+        // for (let i = 0; i <= 100; i++) {
+        //     sum += i   // sum = sum + i;
+        //     console.log(`sum: ${sum}`); 
+        // }
+        // console.log (`최종 sum: ${sum}`)
+
+        const todos = ['우유 구매' , '메일확인', '헬스']
+
+        // for (let i = 0; i < todos.length; i++) {
+        //     console.log (`${i}번째 할일은 ${todos[i]}`)
+        // }
+
+        // for (let i = todos.length; i >= -1; i--) {
+        //     console.log (`${i}번째 할일은 ${todos[i]}`)
+        // }
+
+        // for (const i in todos) {    
+        //     console.log (`${i}번째 할일은 ${todos[i]}`)
+        // }
+
+        for (const todo of todos) {
+            console.log (`오늘의 할일은 ${todo}`)
+        }
+
+    </script>
+</body>
+</html>

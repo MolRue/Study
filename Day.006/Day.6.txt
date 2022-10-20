@@ -1,7 +1,6 @@
 ﻿day.6......
 
 
-
 float layout
  - div태그로 boxing 하는거 신경쓰기.
 

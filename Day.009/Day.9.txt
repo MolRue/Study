@@ -16,7 +16,6 @@ Java Script - 제어문
  - if else if (조건식) {// 조건식이 true 일때}else{// 조건식이 false 일때}else{//나머지에 해당할때}
  > 1도 아니고 2도 아닐때 나머지는 3! 
 
-
 반복문
 
 let arr = ["h1", 1, "test", 2, 10]

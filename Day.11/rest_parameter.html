@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. rest parameter : 나머지 매개변수
+        // 매개변수가 가변적일때↓
+        // function sample(...items) {
+        //     console.log(items)
+        // }
+
+        // sample(1, 2)
+        // sample(1, 2, 3)
+        // sample(1, 2, 3, 4, 5)
+        //-------------------
+        // a,b 까지는 나오고 뒷부분 부터는 restparameter로 빠진다.
+        // function sample(a, b, ...items) {
+        //     console.log(a, b, items)
+        // }
+
+        // sample(1, 2)
+        // sample(1, 2, 3)
+        // sample(1, 2, 3, 4, 5)
+
+        // ------------------------
+        // function min(first, ...rests) {
+
+        //     let output
+        //     let items
+
+        //     //숫자랑 배열을 날려줄때, 매개변수의 자료형이 숫자인지 배열인지 판단
+        //     if(Array.isArray(first)) { // 배열인 경우 true, 그렇지 않은경우 false
+        //         output = first[0]  // 배열의 첫번째값
+        //         items = first
+        //     } else if (typeof(first) === 'number') {// typeof : 자료형을 구할수있다. // 숫자형이라면
+        //         output = first
+        //         items = rests // rests 얘 자체가 배열형이다.
+        //     }
+            
+        //     for (const item of items) {  // for...of  같은 경우엔 매개변수의 값을 가져올수 있다.
+        //         if (output > item){  // item 에는 밑에 testArr의 값이 하나씩 대입
+        //             output = item    // 하나씩 대조하는것. output 값이 item값 보다 작아질때까지
+        //         }                    // 최종적으로는 목록의 모든 array 중 가장 작은수가 남을때 까지 반복!
+        //     }
+        //     return output
+        // }
+
+        // const testArr = [52, 273, 43, 103, 275, 24, 57]
+        // console.log(`최소값(숫자): ${min(52, 273, 43, 103, 275, 24, 57)}`)
+        // console.log(`최소값(배열): ${min(testArr)}`)
+
+        //2. spred operator (전개연산자)
+
+ //           function sample(...items) {
+ //           console.log(items)
+ //           }
+            
+ //           const array = [1, 2, 3, 4]
+
+ //           console.log(`전개 연산자를 사용하지 않을때 : ${sample(array)}`) 
+            // [[1,2,3,4]]
+ //           console.log(`전개 연산자를 사용할때 : ${sample(...array)}`)  // 전개 연산자를 사용하려면 매개변수 앞에 '...' 을붙이자
+            // 1,2,3,4
+            // [1,2,3,4]
+            // 전개연산자를 사용할 경우, 배열을 분리해서 하나씩 따로 빼준다. 
+
+            // undefined 가 나오는 이유 = return값이 정의되지 않아서.
+
+        // 3. 기본매개변수
+
+       function earnings(name, wage=9000, hours=40) {  // 초기값을 주었다. 그래서 미 입력된 경우 초기값으로 계산한다. << default parameter : 기본 매개변수
+           console.log(`${name} 님의 급여정보`)
+           console.log(`시급: ${wage}`)
+           console.log(`근무시간: ${hours}`)
+           console.log(`급여: ${wage * hours} 원`)
+           console.log(`====`)
+       }
+
+       earnings('구름')  // 이름만 정의했기 때문에 이름만 나온다. NaN : 숫자가 아닙니다.란뜻.
+       earnings('별', 10000)   // 두가지만 정의했기 때문에 시급까진 나옴. 그래서 3번째 급여가 안나옴
+       earnings('달', 10000, 52)   // 
+
+
+        // 4. 구버전 자바스크립트에서 매개변수 구하기 (참고) << 옛날엔 이런걸 썼었다. 이정도?
+/*
+        function sample() {
+            console.log(arguments)   //arguments : 매개변수를 배열로 받아온다.
+
+            for (let i = 0; i < arguments.length; i++) {    //argument를 for 문으로 돌린다.
+                console.log(`${i}번째 : ${arguments[i]}`)
+            }
+        }
+
+        sample(1,2)
+        sample(1,2,3)
+        sample(1,2,3,4)
+*/
+
+    </script>
+</body>
+</html> 

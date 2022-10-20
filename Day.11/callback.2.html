@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach()
+
+        const numbers = [273, 52, 103, 32, 57]
+
+        numbers.forEach(function (value, index, array) {
+            console.log(`${array}`)
+            console.log(`${index} 번째 : $ ${value}`)
+        })
+        // javascript에서 이미 만들어둔 함수
+
+        //map << forEach 와 기능이 거의 동일, 하지만 return 을 쓸수 있다.
+        // return 값들을 모아서 새로운 배열로 만들수도 있다.
+        // map 안에 함수를 통으로 넣는다!
+
+        // const numbers = [1, 2, 3, 4, 5]
+
+        // let result = numbers.map(function(value, index, array){
+        //     console.log(`${index}번째 : ${value}`)
+        //     return value * value
+        // })
+
+        // console.log(result);
+
+        // filter : 걸러준다???
+        // map이랑 다른점 : map 같은 경우, 단순히 데이터 자체를 return 하지만
+        // filter 는 return값이 'true' 일경우에만 해당 데이터를 모아준다.
+
+        // const numbers = [0, 1, 2, 3, 4, 5]
+        
+        // const evenNumbers = numbers.filter(function(value){
+        //     return value % 2 === 0  //짝수로 return 
+        // })
+        // console.log(`결과: ${evenNumbers}`)
+
+    </script>
+</body>
+</html>

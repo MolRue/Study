@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀?이</title>
+</head>
+<body>
+    <!-- 1. 연도를 입력하고, 윤년을 확인하는 함수를 만드시오 -->
+    <!-- 4로 나누어 떨어지면서 100으로 나누어 떨어지지 않는 해는 윤년 -->
+    <!-- 또는 400으로 나누어 떨어지는 해는 윤년 -->
+
+    <!-- 2. 매개변수 a,b 를 입력받아 a부터 b 까지 더한 값을 리턴하는 함수를 만드시오 -->
+    <!-- 3. 배열을 입력받아 최소값을 구하는 함수를? -->
+    <script>
+        // 1. 
+        
+        function isLeapYear(year){
+        return (year % 4 === 0) && (year % 100 !==0 ) || (year % 400 === 0)
+        }
+
+        console.log(`2020년은 윤년일까?${isLeapYear(2020)}`)
+        console.log(`2021년은 윤년일까?${isLeapYear(2021)}`)
+        console.log(`2022년은 윤년일까?${isLeapYear(2022)}`)
+
+        console.log('-------------------------')
+
+        // 2.
+        
+        function sumAll(a,b){
+        let output = 0;
+        for (let i = a; i <= b; i++){
+        output += i
+        }
+        return output
+        }
+
+        console.log(`1~10까지의 합 : ${sumAll(1,10)}`)
+        console.log(`1~100까지의 합 : ${sumAll(1,100)}`)
+
+        // 3.
+
+        function min(array){
+        let output = array[0]
+        for (const item of array){
+        if(output > item){
+        output = item
+        }
+        }
+        return output
+        }
+
+        const testArray = [52, 488, 15, 36, 10, 55]
+        console.log(`${testArray} 중에서 최솟값 = ${min(testArray)}`)
+
+    </script>
+</body>
+</html>

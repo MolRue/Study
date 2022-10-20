@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bmi 지수 찾던 함수remind</title>
+</head>
+<body>
+    <script>
+
+     // 비익명 함수
+     //   function bmi(weight, height) {
+     //       let result = weight / (height * height)    // 변수 설정, let result : 담아두기
+     //       return result;  // 되돌려주는 (return) 값을 어딘가에서 받아야 한다.
+     //   }
+
+        // bmi(60, 1.6)
+    // 익명함수
+    //    const bmi = function(weight, height) {
+    //        let result = weight / (height * height)    // 변수 설정, let result : 담아두기
+    //        return result;  // 되돌려주는 (return) 값을 어딘가에서 받아야 한다.
+    //    }
+
+
+    // 화살표함수
+
+    //    const bmi = (weight, height) => {
+    //        return weight / (height * height);
+    //    }
+
+    // 중괄호가 생략된 화살표 함수
+    const bmi = (weight, height) => weight / (height * height);
+
+
+        let result = bmi (60, 1.6)
+        console.log (result)
+
+    </script>
+</body>
+</html>

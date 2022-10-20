@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    // let result = numbers.filter(function(value){        // << 참고로 매개변수라 이름 마음대로 해도 된데
+    //     return value % 2 === 0                          // << 이 조건이 true라면, value 값을 result로 보내주고, 그걸 모아서 배열해준다.
+    // })
+
+    let result = numbers.filter (value => value % 2 === 0)
+
+    console.log(result)
+
+    </script>
+</body>
+</html>

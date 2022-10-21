@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 전개연산자 (Spread Operator)
+
+    // 얕은 복사, 깊은 복사
+
+    // ↓얕은 복사 : 데이터 하나를 두고 공유???
+    // 같은 데이터를 보고있어서 값을 약간 다르게 설정해도 같은값이 나와버린다.
+
+    // const obj1 = ['우유', '식빵']
+    // const obj2 = obj1
+    
+    // obj2.push('고구마')
+    // obj2.push('토마토')
+
+    // console.log(obj1)
+    // console.log(obj2)
+
+    
+    // ↓깊은 복사 : Sperad Operator 사용
+    // 하지만 완벽한 복사는 아니라고.... 뭔지는 대충 알겠는데 
+    // const obj1 = ['우유', '식빵']
+    // /* const obj2 = [...obj1] */
+    //  const obj2 = [...obj1, '감자']
+    
+    // obj2.push('고구마')
+    // obj2.push('토마토')
+
+    // console.log(obj1)
+    // console.log(obj2)
+
+
+    //↓객체의 깊은 복사
+    const product = {
+    name : '건조망고', 
+    type : '당절임',
+    weight : 3
+    }   
+
+    const product2 = {
+        ...product
+    }
+
+    product2.date = "2022/10/11"
+
+    console.log(product);
+    console.log(product2);
+
+            
+</script>
+</body>
+</html>

@@ -1,1 +1,75 @@
 미리써둔 금요일꺼
+
+객체???
+
+ - Java 랑 JavaScript 에도 있는 개념이지만 사용법이 조금 다를순있다?
+ - object
+ - 객체 = 속성(스펙) + 기능(함수)
+
+JSON 데이터?
+ - 배열, 객체데이터
+ - 변수명 중괄호{} 로 선언
+    const product = {
+        name : '건조망고', 
+        type : '당절임',
+        weight : 3
+    }
+
+1. 리터럴 방식
+
+    const pet = {
+        name : '구름', // key : 'value'
+        age : 3,
+        kind : '아메리칸숏헤어',
+        eat : function(food) {  // 기능은 함수로 구현한다.
+            console.log(`구름이가 ${food}을(를) 먹습니다.`)
+        },
+        
+        sleep : function(where) {
+            console.log(`구름이가 ${where}에서 잠을 잡니다.`)
+        },
+
+        favorite : function(what) {
+            console.log(`구름이가 가장 좋아하는 것은 ${what} 입니다.`)
+        }
+    }
+ - 객체 = 속성(스펙) + 메소드(함수)
+ - 객체의 이름, 특징 등을 정의하고 기능을 함수로 구현한다.
+ - 참고 : study > objest02
+
+
+2. 객체 생성자 함수방식
+
+ - Java 랑 비슷하다??
+ - 객체 이름을 지어줄땐 대문자로 시작한다.
+ - 객체를 여러개 만들수도 있다.
+ - 객체를 쓰는 이유? 코드의 생산성이 높아진다. (똑같은걸 여러번 쓸필요가 없어진다.)
+ - const pet2 = new Pet() // 객체 안에 있는걸 가져다 쓸 수 있다.
+ - ☆★객체를 생성하는 순간에 각 속성의 값이 할당이 된다!
+
+3. prototype 방식
+
+ - 객체 생성자 방식과 비슷하지만 다르다!
+ - 객체를 생성하고, 함수를 따로 빼서 쓴다.
+ - prototype 으로 객체를 하나로 묶어서 함수를 적용하는 방식.
+ - 메모리가 절약된다고 한다.
+
+    Pet.prototype.eat = function(food) {
+        console.log(`${this.name}(이)가 ${food}을(를) 먹습니다.`)
+    }
+    Pet.prototype.agePrint = function() {
+            console.log(`${this.name}(이)의 나이는 ${this.age}세 입니다.`)
+    }
+    Pet.prototype.breedPrint = function(breed) {
+            console.log(`${this.name}(이)의 품종은 ${this.breed} 입니다.`)
+        }
+
+4. Class 방식??? (자바스크립트에서 추가된 방법.)
+
+
+
+split : 여러 문자열로 나눈다.
+trim : 양쪽 끝의 공백을 제거
+concat : 정의된 문자열을 ,로 서로 이어준다?
+
+

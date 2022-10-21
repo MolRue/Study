@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체03</title>
+</head>
+<body>
+    <script>
+        // 2. 객체 생성자 함수방식
+        // 객체 = 속성(스펙) + 메소드(함수)
+        // Java 랑 비슷하다??
+        // 객체 이름을 지어줄땐 대문자로 시작한다.
+
+        //객체를 정의
+        function Pet(nameVal, ageVal, catBreed) {
+            this.name = nameVal  // this 가 지칭하는건 '현재 객체', function Pet(name) 안에서만 쓰일수있다.
+            this.age = ageVal
+            this.breed = catBreed
+            this.eat = function(food) { // 현재 객체의 안에있는 함수를 정의
+                console.log(`${this.name}(이)가 ${food}을(를) 먹습니다.`)
+            }
+            this.agePrint = function(age) {
+                console.log(`${this.name}(이)의 나이는 ${this.age}세 입니다.`)
+            }
+            this.breedPrint = function(breed) {
+                console.log(`${this.name}(이)의 품종은 ${this.breed} 입니다.`)
+            }
+            // this.breedPrint = function(breed) {
+            //     console.log(`${this.name}(이)의 품종은 ${breed} 입니다.`)
+            // }
+        }
+
+        // 객체를 생성
+        const pet = new Pet("구름", 4, '코리안숏헤어'); // 변수 → 객체명 | new 붙여서 쓰는경우 객체가 생성됨
+        // 객체를 여러개 만들수도 있다.
+        // 객체를 쓰는 이유? 코드의 생산성이 높아진다. (똑같은걸 여러번 쓸필요가 없어진다.)
+        const pet2 = new Pet("별", 2, '스코티쉬폴드') // 객체 안에 있는걸 가져다 쓸 수 있다.
+        const pet3 = new Pet("달", 3, '노르웨이 숲')
+        const pet4 = new Pet("태양",1, '먼치킨')
+        // ↑ 얘들 하나하나가 객체이다
+        // ☆★객체를 생성하는 순간에 각 속성의 값이 할당이 된다!
+
+        // console.log(pet.name)
+
+        pet.eat('밥')
+        pet.agePrint()
+        pet.breedPrint()
+
+        pet2.eat('참치')
+        pet2.agePrint()
+        pet2.breedPrint()
+
+        pet3.eat('닭고기')
+        pet3.agePrint()
+        pet3.breedPrint()
+
+        pet4.eat('사료')
+        pet4.agePrint()
+        pet4.breedPrint()
+
+
+    </script>
+</body>
+</html>

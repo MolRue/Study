@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체02</title>
+</head>
+<body>
+    <script>
+        // 1. 리터럴 방식 (6-1-1.html)
+        // 객체 = 속성(스펙) + 메소드(함수)
+
+        const pet = {
+            name : '구름', // key : 'value'
+            age : 3,
+            breed : '아메리칸숏헤어',
+
+            // ↓ 일반적인 함수정의
+            // eat : function(food) {  // 기능은 함수로 구현한다.
+            //     console.log(`구름이가 ${food}을(를) 먹습니다.`)
+            // },
+            
+            // sleep : function(where) {
+            //     console.log(`구름이가 ${where}에서 잠을 잡니다.`)
+            // },
+
+            // favorite : function(what) {
+            //     console.log(`구름이가 가장 좋아하는 것은 ${what} 입니다.`)
+            // }
+
+            // ↓ 화살표함수
+            eat : (food) => { 
+                 console.log(`구름이가 ${food}을(를) 먹습니다.`)
+            },
+
+            sleep : (where) => {
+                 console.log(`구름이가 ${where}에서 잠을 잡니다.`)
+            },
+             favorite : (what) => {
+                 console.log(`구름이가 가장 좋아하는 것은 ${what} 입니다.`)
+            }
+        }
+
+        console.log(pet.name)
+        console.log(pet.age)
+        console.log(pet.kind)
+        pet.eat('닭고기') // 함수 실행
+        pet.sleep('화장실')
+        pet.favorite('그루밍')
+
+    </script>
+</body>
+</html>

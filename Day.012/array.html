@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 배열 기반의 다중 할당
+        let [a, b] = [1, 2] 
+        console.log(a, b)
+
+        // 객체 기반의 다중 할당
+        const product = {
+            name : '건조망고', 
+            type : '당절임',
+            weight : 3,
+        }
+        // 객체안에 정의되있는 name 이랑 type 를 자동으로 가져와서 할당해준다.
+        const { name, type} = product
+        console.log(name, type)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체01</title>
+</head>
+<body>
+    <script>
+        // ↓객체 데이터? JSON 데이터?
+
+        const product = {
+            name : '건조망고', 
+            type : '당절임',
+            weight : 3,
+            arr : ['건','망','고']
+        }
+
+        console.log(product)
+        console.log(product.type)
+        console.log(product.arr)
+
+        // ↓데이터 바꾸기
+
+        product.name = '바나나'
+        console.log(product)
+
+        // ↓배열 꺼내오기
+
+        const result = product.arr  // << 변수지정
+        console.log(result[1])
+
+        // ↓이미 정의된 객체에 데이터 추가하는 법? 
+
+        product.date = '2022/10/21'
+        console.log(product)
+
+        // ↓이미 정의된 객체에 데이터를 삭제하는 법??
+
+        delete product.weight 
+        console.log(product)
+
+    </script>
+</body>
+</html>

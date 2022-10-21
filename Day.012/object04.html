@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체04</title>
+</head>
+<body>
+    <script>
+        // 3. prototype 방식
+
+        function Pet(nameVal, ageVal, catBreed) {
+            // 객체 = 속성 + 메소드
+            this.name = nameVal;
+            this.age = ageVal;
+            this.breed = catBreed;
+        }
+        // 왜 함수만 따로 빼서 쓰는가???
+        // 객체명.prototype.함수명 = finction() {}
+        Pet.prototype.eat = function(food) {
+            console.log(`${this.name}(이)가 ${food}을(를) 먹습니다.`)
+        }
+        Pet.prototype.agePrint = function() {
+            console.log(`${this.name}(이)의 나이는 ${this.age}세 입니다.`)
+        }
+        Pet.prototype.breedPrint = function(breed) {
+            console.log(`${this.name}(이)의 품종은 ${this.breed} 입니다.`)
+        }
+
+        const pet = new Pet("구름", 4, '코리안숏헤어')
+        const pet2 = new Pet("별", 2, '스코티쉬폴드')
+        const pet3 = new Pet("달", 3, '노르웨이 숲')
+        const pet4 = new Pet("태양",1, '먼치킨')
+        
+        pet.eat('밥')
+        pet.agePrint()
+        pet.breedPrint()
+
+        pet2.eat('참치')
+        pet2.agePrint()
+        pet2.breedPrint()
+
+        pet3.eat('닭고기')
+        pet3.agePrint()
+        pet3.breedPrint()
+
+        pet4.eat('사료')
+        pet4.agePrint()
+        pet4.breedPrint()
+
+
+
+    </script>
+</body>
+</html>

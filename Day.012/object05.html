@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        // ↓ JSON 데이터?
+
+        const product = {
+            name : '건조망고', 
+            type : '당절임',
+            weight : 3,
+            arr : ['건','망','고']
+        }
+
+        const product2 = [{
+            name : '건조바나나', 
+            type : '바나나절임',
+            weight : 2,
+        }, {
+            name : '건조라임', 
+            type : '동결건조',
+            weight : 1,
+        }]
+
+        // 문자열을 바꿔주려면, key 부분에 쌍따옴표를 넣어야 오류가 없다.
+        const product3 = '{ "result": true, "count": 42  }'
+        const obj = JSON.parse(product3)
+        console.log(obj)
+
+        // ↓ 객체 데이터를 문자열로 바꿔준다.
+        console.log(JSON.stringify(product2))
+
+        console.log(product2[0])
+        console.log(product2[1])
+
+    </script>
+</body>
+</html>

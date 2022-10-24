@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번 했을대 글자가 선택되는걸 방지 */
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>클릭횟수 : 0</h1>
+    <button id="connect">이벤트 연결</button>
+    <button id="disconnect">이벤트 제거</button>
+    <p>이벤트 연결상태 : 해제</p>
+    <script>
+        let isConnect = false //isConnect현재 이벤트의 상태를 판단하는 변수(제거된 건지, 아닌건지)
+        const h1 = document.querySelector('h1')
+        const p = document.querySelector('p')
+        const conButton = document.querySelector('#connect')
+        const disconButton = document.querySelector('#disconnect')
+
+
+        const listener = function () {
+            counter++;
+            h1.textContent = `클릭횟수 : ${counter}`
+        }
+
+        conButton.addEventListener('click', function(){
+            if (isConnect === false){   // 이벤트가 연결되지 않은 상태라면?
+                h1.addEventListener('click', listener)
+                p.textContent = '이벤트 연결상태 : 연결'
+                isConnect = true
+            }
+        })
+        disconButton.addEventListener('click', function(){
+            if (isConnect === true){
+                h1. removeEventListener('click', listener)
+                p.textContent = '이벤트 연결상태 : 해제'
+                isConnect = false
+            }
+        })
+
+    </script>
+</body>
+</html>

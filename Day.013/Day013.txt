@@ -1,0 +1,36 @@
+우오 13일
+
+문서 객체 모델?
+
+DOM? 
+ - Document Object Model
+ - HTML 문서에 접근하기 위한 인터페이스 
+
+기본 DOM
+ • 페이지 로드
+ • DOMContentLoaded
+ • 요소 선택
+ • querySelector, querySelectorAll
+ • getElementById, getElementByClassName
+ • 글자 조작
+ • textContent, innerHTML
+ • 속성 조작
+ • setAttribute, getAttribute
+ • 스타일 조작
+ • style
+ • 태그 조작
+ • createElement, appendChild, removeChild
+ • 이벤트
+ • addEventListener
+ • removeEventListener 
+
+BOM?
+ - 
+
+
+Class?
+
+생각의 흐름?? 
+
+뭘해야하지.....? 
+

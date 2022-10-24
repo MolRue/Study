@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        첫번째 div
+        <span>테스트 입니다.</span>
+    </div>
+    <script>
+        // ↓ 요소를 하나 생성해준다. h1 태그를 넣지 않았지만 태그가 삽입되어있다.
+        // createElement('태그명') : 해당 요소를 생성
+        const header = document.createElement('h1') 
+        
+        // ↓ append : 추가  ↓ body에 자식요소로 추가해준다 란뜻.
+        document.body.appendChild(header)
+
+        const box = document.querySelector('.box')
+        const spanTag = document.querySelector('span')
+        box.appendChild(header)
+        box.removeChild(spanTag)
+    </script>
+</body>
+</html>

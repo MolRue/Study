@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿼리샐렉터</title>
+</head>
+<body>
+    <h1 class="txt">쿼리샐렉터!?!?!?</h1>
+    <h1 class="txt">쿼리샐렉터!?!?!?</h1>
+    <h1 class="txt">쿼리샐렉터!?!?!?</h1>
+    <h1 class="txt">쿼리샐렉터!?!?!?</h1>
+    <script>
+        /*
+        // 태그 선택자, 클래스 선택자, 아이디선택자 등등....모두 사용할수 있다.
+        // document.querySelector('선택자') → 해당요소를 가져온다.
+        const header = document.querySelector('.txt')
+        // 여러개를 선택할땐 쿼리샐렉터를 쓰면 적용이 안된다구?
+        
+        console.log(header)
+
+        // 요쇼.style.css속성(카멜표기) = 'css속성값'
+        header.style.color = 'white'
+        header.style.backgroundColor = '#3377cf'
+        header.style.padding = '10px'
+        */
+
+        const headers = document.querySelectorAll('.txt')
+        // console.log(header)
+        // 4개의 h1 요소가 배열형으로 나온다
+
+        // 방법1
+        // for (let i = 0; i < headers.length; i++) {
+        //     headers[i].style.color = 'white'
+        //     headers[i].style.backgroundColor = '#3377cf'
+        //     // console.log(headers[i])
+        // }
+
+        // 방법2
+        // for (header of headers) {
+        //     header.style.color = 'blue'
+        //     header.style.backgroundColor = 'yellow'
+        // }
+
+
+        // 방법3
+        headers.forEach(function(header){
+            header.style.color = 'white'
+            header.style.backgroundColor = 'black'
+        })
+
+
+
+    </script>
+</body>
+</html>

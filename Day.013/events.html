@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번 했을대 글자가 선택되는걸 방지 */
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>클릭횟수 : 0</h1>
+    <script>
+        let counter = 0
+        const h1 = document.querySelector('h1')
+        /* // addEventListener('이벤트명', 함수)
+        h1.addEventListener('click', function(){
+            // ↓ 클릭했을 때, 실행되길 원하는 코드 작성
+            counter++;
+            h1.textContent = `클릭횟수 : ${counter}`
+        })  // ES5
+        // h1.addEventListener('click', function() => ) // ES6  
+
+        */
+
+        const listener = function () {
+            counter++;
+            h1.textContent = `클릭횟수 : ${counter}`
+        }
+
+        h1.addEventListener('click', listener)
+       // h1.removeEventListener('click', listener)
+
+    </script>
+</body>
+</html>

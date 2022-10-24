@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">inch<br>
+    <button>계산</button>
+    <p></p>
+    <script>
+        const button = document.querySelector('button')
+        const input = document.querySelector('input')
+        const p = document.querySelector('p')
+        button.addEventListener('click', function(){
+            const inch = Number(input.value)  // value : 여기서 value는 input 창에서 입력받은 값을 가져온다.
+            // Number 로 강제 형변환 을 시켜준다.
+            
+            // ↓ 숫자 인지 문자인지 판단할 요소를 넣자. typeof 같은 방법도 있다고한다.
+            
+            if (isNaN(inch)){   // isNaN → 숫자가 아닌 값이라면 true 를 뱉겠지!
+                p.textContent = '숫자를 입력하세요.'
+                return   // return → 함수에서만 사용된다. 여기서는 callback 함수이므로 사용가능!
+                // return이 실행되면 함수가 종료된다. 바로 함수를 종료시키기 위함이다.
+            }
+
+            const cm = inch * 2.54  // cm를 구해주는 공식을 정의.
+            p.textContent = `${inch}inch는 ${cm}cm입니다.`
+
+        })
+    </script>
+</body>
+</html>

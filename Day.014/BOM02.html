@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM 자주 쓰이는 것들</title>
+</head>
+<body>
+    <button onclick="loc()">이동!</button>
+    <button onclick="back()">뒤로!</button>
+    <script>
+        function loc() {
+            location.href = "./BOMtest.html" // 페이지이동
+        }
+        function back() {
+            // history.go(-1) // 뒤로가기
+            history.back(-1)  // 얘도 뒤로가기
+        }
+
+        var sWidth =  screen.width;
+        var sHeight =  screen.height;
+        var sColor =  screen.colorDepth;
+        console.log(sWidth);
+        console.log(sHeight);
+        console.log(sColor);
+
+    var local = location.href;
+    console.log(local);
+    
+    var NaviInfo = "User-agent header sent: " + navigator.userAgent;
+    console.log(NaviInfo);
+    </script>
+</body>
+</html>

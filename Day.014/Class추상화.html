@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 얘도 객체이기 때문에 속성 + 메소드 로 구성되어있다.
+        class Pet{
+            // construchor : 생성자 함수
+            constructor(nameVal, ageVal, breedVal) {
+            this.name = nameVal
+            this.age = ageVal
+            this.breed = breedVal
+            // ↑ 속성
+            }
+            // ↓ 메소드(함수)
+            eat (food) {
+                console.log(`${this.name} 이가 ${food}(을)를 먹습니다.`)
+            }
+            agePrint (age) {
+                console.log(`${this.name}(이)의 나이는 ${this.age}세 입니다.`)
+            }
+            breedPrint (breed) {
+                console.log(`${this.name}(이)의 품종은 ${this.breed} 입니다.`)
+            }
+        }
+
+        //사용법은 prototype 방식과 비슷하지만 정의하는법이 조금 다르다ㄹ 
+        
+        const pet = new Pet('구름', 4, '코리안숏헤어')
+        
+
+        console.log(pet.name)
+        console.log(pet.age)
+        console.log(pet.breed)
+
+        pet.eat('통조림')
+        pet.agePrint()
+        pet.breedPrint()
+
+
+    </script>
+</body>
+</html>

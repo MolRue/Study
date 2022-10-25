@@ -98,3 +98,10 @@ body {
     background: #222;
     color: #fff;
 }
+
+#signup .alert_msg {
+    display: none;
+    font-size: 0.8rem;
+    color: red;
+    padding-left: 110px;
+}

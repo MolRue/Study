@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 = 속성 + 메소드
+        class Square{
+            #length  // ← this.length를 private로 사용하겠다는 정의를 내린다. 뒷부분에도 #length로 정의할순있다.
+            // ↑ 외부에서 접근할 수 없게 해준다. → syntaxError private field 오류로 나온다. 수정할수도 없지.
+
+            // 속성
+            constructor (length) {
+                this.#length = length
+            }
+            // ↓ 값을 보여주는 역할
+            get length () {
+                return this.#length
+            }
+            // ↓ 값을 setting 하는 역할
+            set length (length) {
+                this.#length = length
+            }
+
+            // return 해서 얻을것이 있을때 
+            get getPerimeter() {
+                return 4 * (this.#length)
+            } 
+            // 메소드(2) 사각형의 넓이
+            get getArea() {
+                return this.#length * this.#length
+            }
+        }
+
+        // private : 외부에서 접근하지 못하게 한다.
+        const square = new Square(10)
+    //    square.length = -10 // ← 바뀌면 안되는 값이 뒤에 써진 값으로 인해 바뀔수도 있다.
+        console.log(`length: ${square.length}`)
+        console.log(`getPerimeter(): ${square.getPerimeter}`)
+        console.log(`getArea(): ${square.getArea}`)
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+javascript - Class
+
+ - 객체지향 프로그래밍 언어들은 클래스 라는 문법으로 객체를 효율적이고 안전하게 해준다?
+
+추상화
+
+ - 프로그램에서 필요한 정보만 추려서 객체를 표현하는거.
+ - 많~은 정보가 있겠지만, 그중 필요한 정보만 추려낸다.
+
+객체 생성 
+
+객체?? vs 인스턴스??
+
+ - 거의 같은말이라고 한다.
+ - 객체 : 구현할 대상(구현전)
+ - 인스턴스 : 구현된 구체적 실체
+
+ 상속??
+ - 부모클래스에 있는 속성과 메소드를 자식 클래스가 상속받아 사용한다.
+
+ class Square extends Rectangle {
+    constructor(length, length2) {  // constructor : 생성자함수. 
+        console.log(length, length2)
+         super(length, length2)  // super : 부모의 생성자 함수를 호출한다.
+    }
+}
+
+그냥 함수 vs 정적 함수
+
+function 
+ - 클래스에 포함되지 않는다. 
+ - 관리가 어렵다?
+
+static function
+ - 클래스에 가깝게 포함된다. 
+ - 그로 인해 관리가 쉬워진다?
+
+Window 객체?
+ - 최상위객체?
+ - 특징이? alert 경우 window.alert 이렇게 쓰는게 맞지만 window는 생략이된다.
+
+계획이......
+
+11/7까지 팀프
+
+간단한? 형식은 자유? 

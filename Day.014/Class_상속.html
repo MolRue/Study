@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 객체 = 속성 + 메소드
+        class Rectangle{
+            // 속성
+            constructor (width, height) {
+                console.log(width)
+                console.log(height)
+                this.width = width
+                this.height = height
+            }
+
+            // 메소드(1) 사격형둘레
+            getPerimeter() {
+                return 2 * (this.width + this.height)
+            } 
+            // 메소드(2) 사각형의 넓이
+            getArea() {
+                return this.width * this.height
+            }
+        }
+
+        // const Rect = new Rectangle(10, 20)
+        // console.log(rect.getPerimeter())
+        // console.log(rect.getArea())
+
+        
+        class Square extends Rectangle {
+            constructor(length, length2) {  // constructor : 생성자함수. 
+                console.log(length, length2)
+                 super(length, length2)  // super : 부모의 생성자 함수를 호출한다.
+            }
+        }
+        // 상속을 하게되면 자식 클래스는 부모클래스에 있는 속성과 메소드를 쓸 수 있다.
+        const square = new Square(10, 20)
+        console.log(square.width)
+        console.log(square.getPerimeter())
+        console.log(square.getArea())
+        
+    </script>
+</body>
+</html>

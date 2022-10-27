@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="wrap">
+        <li class="list_1">
+            <span class="child1">1번</span>
+            <span>2번</span>
+            <span class="child3">3번</span>
+            <span>4번</span>
+            <span class="child5">5번</span>
+        </li>
+        <li class="list_2">리스트2</li>
+        <li class="list_3">리스트3</li>
+    </ul>
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            // $(".list_1 span").eq(2).css("border", "1px solid purple")
+            // $(".list_1 span:lt(2)").css("border", "1px solid green")
+            // $(".list_1 span:gt(2)").css("border", "1px solid orange")
+            
+            // $(".wrap li:first").css("border", "1px solid red")
+            // $(".wrap li:last").css("border", "1px solid blue")
+            // $(".wrap li:odd").css("border.", "1px solid yellow")
+
+            // $(".list_1 span:first-of-type").css("border", "1px solid green")
+            // $(".list_1 span:last-of-type").css("border", "1px solid orange")
+
+            // nth-child 는 index번호가 아니다!
+            // $(".list_1 span:nth-child(3)").css("border", "1px solid green")
+
+            // 3번 index 전까지만 잘라내겠다. 선택되는건 1번2번 , (0번은 아니!)
+            $(".list_1 span").slice(1,3).css("border", "1px solid green")
+            
+
+        })
+    </script>
+    
+</body>
+</html>

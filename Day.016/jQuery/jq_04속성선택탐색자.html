@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <a href="#" target="_blank">이동</a>
+    <a href="https://www.naver.com/" target="_blank">이동2</a>
+    <form action="#" id="member_f" method="get">
+        <input type="text" name="user_id" id="user_id">
+        <input type="password" name="user_pwd" id="user_pwd">
+    </form>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script>
+        $(function (){
+            $('a[target]').css("border", "1px solid red")
+            // a태그 안에서 target 속성을 가진 요소를 선택
+            $('a[href^=https]').css("border", "1px solid yellow")
+            // '태그[속성^(이단어로 시작하는 속성)]'
+            
+            $('#member_f :text').css({
+                "background-color":"skyblue",
+                "height" : "200px"
+            })
+
+            $('#member_f :password').css({
+                "background-color":"honeydew",
+                "height" : "200px"
+            })
+            // 예민하네 -_-.... 띄어쓰기 안했다고 안됨ㅋ
+        })
+
+        
+    </script>
+</body>
+</html>

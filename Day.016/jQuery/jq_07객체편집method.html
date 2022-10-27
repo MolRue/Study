@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {background-color: green;}
+        .red {background-color: red;}
+        .bluegray {background-color: #3377cf;}
+        .yellow {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제목</h1>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+    </div>
+    <div id="wrap2">
+        <h1>제목</h1>
+    </div>
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            // $("#wrap p:eq(2)").after("<p>After</p>")
+            // // index 번호 2는 내용3 이다. 그래서 다음
+            // $("#wrap p:eq(1)").before("<p>Before</p>")
+            // // index 번호 1은 내용2 이다. 그래서 그 전!
+            // // eq : index번호로 선택한다!
+
+            // $("<p>insertAfter</p>").insertAfter("#wrap p:eq(2)")
+            // $("<p>insertBefore</p>").insertBefore("#wrap p:eq(1)")
+
+            // $("#wrap").append("<p>내용4</p>")
+            // // ↑ .append : 태그의 가장 맨 뒤에 내용을 추가한다.
+            // $("#wrap").prepend("<p>내용0</p>")
+            // // ↑ .prepend : 태그의 가장 맨 앞에 내용을 추가한다.
+
+            // $("<p>내용4</p>").appendTo("#wrap")
+            // $("<p>내용0</p>").prependTo("#wrap")
+            // append/prepend 랑 appendTo/prependTo 는 효과는 동일하다. 다만 쓸때 요소 순서가 중요.
+
+            // console.log($('#wrap').children().clone())
+
+            // var copy = $('#wrap').children().clone()
+            //     $("#wrap2").append(copy)
+            // .clone : 복제한대!
+
+            // $("#wrap").remove()
+            // $("#wrap").empty()
+            // remove : 다 지워준다. empty : 하위요소만 비워준다.
+
+            // $("h1").replaceWith("<h3>헤더바꿈</h3>")
+            // replaceWith : h1 요소를 h3으로 바꿔준다.
+            $("<h3>헤더바꿈</h3>").replaceAll("h1")
+            // replaceAll : replaceWith랑 기능은 같지만 거꾸로 써주자.
+
+        })
+    </script>
+    
+</body>
+</html>

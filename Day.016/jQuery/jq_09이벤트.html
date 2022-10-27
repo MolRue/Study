@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p>
+
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            $('.btn1').click(function(){
+                $('.btn1').parent().next().css({"color":"red"})
+            })
+
+            $('.btn2').on({
+                "mouseover focus" : function(){
+                    $('.btn2').parent().next().css({"color":"red"})
+                },
+                "mouseout blur" : function(){
+                    $('.btn2').parent().next().css({"color":"black"})
+                }
+            })
+            // on : 이벤트 종류를 여러개 등록할때 쓸수 있다. {} 객체데이터
+            $(".btn1").off("click")
+            $(".btn2").off("mouseover")
+            // .off : 이벤트를 제거한다. 보통은 특정 경우에 제거되도록 설정한다.
+            
+        })
+    </script>
+    
+</body>
+</html>

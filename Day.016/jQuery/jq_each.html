@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="wrap">
+        <li class="list_1">리스트1</li>
+        <li class="list_2">리스트2</li>
+        <li class="list_3">리스트3</li>
+    </ul>
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            var obj =[
+            {
+                area : "서울",
+                name : "라이언"
+            },{
+                area : "인천",
+                name : "어피치"
+            },{
+                area : "부산",
+                name : "제이지"
+            }
+        ]
+        // $(obj).each(function(idx, val){
+        //     console.log(idx, val)
+        // })
+
+        // $('.list li').each(function(idx, val){
+        //     console.log(idx, val)
+        // })
+
+        // var arr1 = $.map(obj, function (val, idx) {
+        //     if (val.area === "서울") {
+        //         return val
+        //     }
+        //     console.log(arr1)
+        // })
+
+        // var names = ["김씨","이씨","박씨"]
+
+        // var idxNum = $.inArray("박씨", names)
+        // console.log(idxNum)
+        // console.log($.isArray(names))   // 배열인지 아닌지
+        
+        var idxNum = $('li').index($('.list_2'))
+        console.log(idxNum)
+
+    })
+
+
+
+    </script>
+    
+</body>
+</html>

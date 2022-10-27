@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer_wrap">
+    <h1>콘텐츠 탐색 선택자</h1>
+    <section id="inner1">
+        <h1>이너1</h1>
+        <p class="test"><span>내용1</span></p>
+        <p><span>내용2</span></p>
+        <p><span>내용3</span></p>
+    </section>
+    <section id="inner2">
+        <h1>이너2</h1>
+        <p><span>내용4</span></p>
+        <p><span>내용5</span></p>
+        <p class="test2" style="display: block;"><span>내용6</span></p>
+    </section>
+</div>
+<script src="./jquery-3.6.1.min.js"></script>
+<script>
+    $(function(){
+        // $("#inner2 p:contains(내용4)").css({"background-color":"#ff0"})
+        // $("#inner1 p:has(span)").css({"background-color":"brown"})
+
+        // $("#outer_wrap").contents().css({"background-color":"honeydew"})
+        // ↑outer_wrap 안에 있는 모든 contents요소를 다 잡아준다.
+
+        // $("#inner2 p").not(":first").css({"background-color":"#3377cf"})
+        // ↑ inner2 안의 p태그 중에서 first 빼고 다 잡아줌.
+
+        // $("#inner1").find('.test').css({"background-color":"#2721c3"})
+
+        console.log($('.test2').is(":visable"))
+    })
+</script>
+</body>
+</html>

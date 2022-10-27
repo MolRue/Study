@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" class="title .title2">제목</h1>
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            $('#title').css("color", "red")
+            // ↑ document.querySelector('#title') : 둘다 의미가 같다.
+        })
+    </script>
+    
+</body>
+</html>

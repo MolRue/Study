@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .green {background-color: green;}
+        .red {background-color: red;}
+        .bluegray {background-color: #3377cf;}
+        .yellow {background-color: yellow;}
+    </style>
+</head>
+<body>
+    <h1>
+        <strong>객체 조작</strong>
+    </h1>
+    <p class="ct1">내용1</p>
+    <p class="ct1">내용2</p>
+    <p class="ct2">내용3</p>
+    <p class="ct2">내용4</p>
+
+    <ul>
+        <li>내용5</li>
+        <li>내용6</li>
+    </ul>
+
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+            $("strong").unwrap();
+            // unwrap : 해당 요소를 감싸고있는 부모요소를 제거
+            $(".ct1").wrap("<div />")
+            // 각각 div 태그로 감싸준다.
+
+            $(".ct2").wrapAll("<div />")
+            // ct2 클래스를 가진 요소들을 한번에 감싸준다.
+
+            $("li").wrapInner("<h3 />")
+            // li 내부에 있는 것들을 h3으로 감싸준다.
+        })
+    </script>
+    
+</body>
+</html>

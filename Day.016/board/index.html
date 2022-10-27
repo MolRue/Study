@@ -4,16 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="./library/fontawesome-free-6.2.0-web/css/all.min.css">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <title>벍걹킹</title>
 
+<!--Open Graph-->
+<!--http://ogp.me/-->
+<!-- https://velog.io/@byeol4001/Meta-Tag-OG%EC%98%A4%ED%94%88%EA%B7%B8%EB%9E%98%ED%94%84-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0 -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Burgurking" />
+<meta property="og:title" content="Burgurking" />
+<meta property="og:description" content="버거킹! 이것이 운명적 와퍼, 앵그리 트러플 와퍼 출시!" />
+<meta property="og:image" content="./img/logo.gif" />
+<meta property="og:url" content="https://www.burgerking.co.kr/" />
+
+<!--Twitter Card-->
+<!--https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started-->
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:site" content="Burgurking" />
+<meta property="twitter:title" content="Burgurking" />
+<meta property="twitter:description" content="버거킹! 이것이 운명적 와퍼, 앵그리 트러플 와퍼 출시!" />
+<meta property="twitter:image" content="./img/logo.gif" />
+<meta property="twitter:url" content="https://www.burgerking.co.kr/" />
+
+<!-- 파비콘 -->
+<!-- https://www.favicon-generator.org/ -->
+<!-- https://hongpage.kr/28 -->
+<link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="./img/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+<link rel="manifest" href="./img/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./library/fontawesome-free-6.2.0-web/css/all.min.css">
+<link rel="stylesheet" href="./animate/animate.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header class="header">
          <!-- 모바일 메뉴 -->
-        <div class="header__Mnav">
+        <div class="header__Mnav animate__animated animate__slideInLeft">
 			<div class="trigger">
 				<button class="mobile close"><i class="fas fa-times fa-lg"></i></button>
 			</div>
@@ -85,7 +127,7 @@
                         <li class="main__list">
                             <a href="#">메뉴소개 <i class="fa-solid fa-caret-down"></i></a>
                             <div>
-                                <ul class="list__drop">
+                                <ul class="list__drop animate__animated animate__fadeIn">
                                     <li><a href="#">스페셜&할인팩</a></li>
                                     <li><a href="#">프리미엄</a></li>
                                     <li><a href="#">와퍼</a></li>
@@ -101,7 +143,7 @@
                         <li class="main__list">
                             <a href="#">매장소개 <i class="fa-solid fa-caret-down"></i></a>
                             <div>
-                                <ul class="list__drop">
+                                <ul class="list__drop animate__animated animate__fadeIn">
                                     <li><a href="#">매장찾기</a></li>
                                 </ul>
                             </div>
@@ -118,7 +160,7 @@
                         <li class="main__list">
                             <a href="#">브랜드스토리 <i class="fa-solid fa-caret-down"></i></a>
                             <div>
-                                <ul class="list__drop">
+                                <ul class="list__drop animate__animated animate__fadeIn">
                                     <li><a href="#">버거킹</a></li>
                                     <li><a href="#">WHY 버거킹</a></li>
                                     <li><a href="#">버거킹 NEWS</a></li>
@@ -333,7 +375,8 @@
     </footer>
     <!-- 라이브러리 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/common.js"></script>
+	<script src="./js/main.js"></script>
     <!-- javascript는 위에 항상 mainjs 가 먼저 와야 한다. 위에서부터 실행하기 때문 -->
 </body>
 </html>

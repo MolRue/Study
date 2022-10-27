@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <p>
+            <button class="btn1">버튼1</button>
+        </p>
+        <p class="btn_test">
+            <button class="btn2">버튼2</button>            
+        </p>
+    </div>
+
+    <script src="./jquery-3.6.1.min.js"></script>   <!-- ← javascript는 위에서부터 읽으니깐.. -->
+    <script>
+        $(function(){
+
+            $(".btn1.on").on("mouseover focus", function(){
+                alert("hello?")
+            })
+
+            $('.btn1').addClass("on")
+            // jQuery는 집어넣었다가 뺐다가.... (동적요소:없었는데 생긴것) 하면 실행이 안된다!?!?
+            // 라이브 이벤트 방식을 쓰면 된다!?
+
+            // 라이브 이벤트 방식
+
+            $('.btn_test').on("mouseover focus", ".btn2.on"), function() {
+                // 부모태그 나 상위태그(document 같은)를 태그해야 한다.
+            $('.btn2').addClass("on")
+            }
+        })
+    </script>
+    
+</body>
+</html>

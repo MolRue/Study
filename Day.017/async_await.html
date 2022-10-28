@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function asyncFunc(){
+            let promise = new Promise ((resolve, reject) => {
+                setTimeout(() => {resolve("완료")}, 2000) // set timer가 실행 되기도 전에 object promise 가 먼저 실행되버린다.
+            })
+            let result = await promise
+            //await : 기다리다 : await 밑에 있는 요소들은 await달린 요소가 끝나기 전까진 실행되지 않는다!!
+            alert(result)
+            // await 는 반드시 async가 선언된 함수에서만 사용가능!
+        }
+
+        asyncFunc()
+    </script>
+</body>
+</html>

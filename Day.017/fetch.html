@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var url = "https://api.openweathermap.org/data/2.5/weather?"
+        url += "appid=b1e93888425bc4d1ae07038666f33882"
+        url += "&units=metric"
+        url += "&lang=kr"
+        url += "&q=seoul"
+
+    const getData = (url) => {
+        return fetch(url)
+    }
+
+    // getData(url).then(
+    //     data=>data.json
+    // ).then(result => 
+    //     console.log(result)
+    // )
+    // 똑같다.
+    // getData(url).then(data=>{
+    //     return data.json
+    // }).then((result) => {
+    //     console.log(result)
+    // })
+    //IE에서는 fetch가 작동하질 않는다.
+
+    getData(url).then(data=>
+        data.json()
+    ).then(
+        result => 
+        console.log(result)
+    )
+
+    </script>
+</body>
+</html>

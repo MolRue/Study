@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acuueWeather</title>
+    <link rel="stylesheet" href="../library/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="../library/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/weather_loction.css">
+</head>
+<body>
+    <header id="main_header">
+        <div class="gnb_container">
+            <div class="gnb menu">
+                <div class="logo">
+                    <a href="../index.html"><img src="../img/logo.svg" alt="로고"></a>
+                </div>
+                <ul class="nav">
+                    <li>
+                        <a href="#" class="underline">레이더 및 지도</a>
+                        <ul class="lnb appear">
+                            <li><a href="#">레이더 및 지도</a></li>
+                            <li><a href="#">레이더</a></li>
+                            <li><a href="#" >위성</a></li>
+                            <li><a href="#">대한민국 기상 레이더</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="underline">동영상</a>
+                        <ul class="lnb appear">
+                            <li><a href="#">동영상</a></li>
+                            <li><a href="#">인기정보</a></li>
+                            <li><a href="#">전문가예보</a></li>
+                            <li><a href="#">스톰 체이서</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="underline">악천후 기상</a>
+                        <ul class="lnb appear">
+                            <li><a href="#">악천후 기상</a></li>
+                            <li><a href="#">허리케인</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="setting">
+                    <a href="#"><i class="fas fa-cog fa-lg"></i></a>
+                </div>
+                <div class="trigger">
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-lg"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="search_box">
+            <div id="search_bar">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                    <input type="text" class="form-control" placeholder="위치 검색" aria-label="위치 검색" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div id="current_location">
+                <div>종로 1,2,3,4 가동</div>
+                <div>대한민국</div>
+            </div>
+        </div>
+    </header>
+    <div id="main_content">
+        <div class="forecast_pane">
+            <span>*온도: </span>
+            <span id="temp"></span>
+            <br />
+            <span>*풍속: </span>
+            <span id="wind"></span>
+            <br />
+            <span>*습도: </span>
+            <span id="humidity"></span>
+        </div>
+    </div>
+    <div id="mobile_menu"></div>
+    <footer id="main_footer">
+        <div>
+            <a href="#">전 세계</a> > 
+            <a href="#">아시아</a> > 
+            <a href="#">대한민국</a> > 
+            <a href="#">서울시</a> > 
+            <a href="#">종로1.2.3.4가동</a>
+        </div>
+        <div>
+            <div>
+                © 2021 AccuWeather, Inc. "AccuWeather" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved.
+            </div>
+            <div>
+                <a href="#">이용 약관</a> | 
+                <a href="#">개인정보 보호정책</a> | 
+                <a href="#">쿠키 사용 정책</a> | 
+                <a href="#">TAG 공개</a>
+            </div>
+        </div>
+    </footer>
+<!-- 라이브러리 -->
+<script src="../js/jquery-3.6.0.min.js"></script>
+<!-- 아큐웨더 -->
+<script src="../js/forecast.js"></script>
+<script src="../js/weather_location.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script>
+        //비동기 첫번재 사례(제이쿼리 ajax통신)
+        // let url = "https://api.openweathermap.org/data/2.5/weather";
+        //     url  += "?appid=f98e648c60dee9415bd3b65e176b86ca";
+        //     url  += "&units=metric";
+        //     url  += "&lang=kr";
+        //     url  += "&q=incheon";
+        
+        // let dataObj;
+
+        // $.ajax({
+        //     type: "GET",
+        //     url: url,
+        //     dataType: "json",
+        //     success: function(data) {
+        //         //정상 응답시 처리 작업 
+        //         dataObj = data;
+        //     },
+        //     error: function(request, status, error) {
+        //         //응답 에러시 처리 작업    
+        //         console.log("code:" + request.status);
+        //         console.log("message:" + request.responseText);
+        //         console.log("error:" + error);
+        //     }
+        // });
+
+        // console.log("결과 값:" + dataObj);
+
+
+        //비동기 두번째 사례
+        console.log('Hello');
+
+        setTimeout(function() {
+            console.log('Bye');
+        }, 3000);
+
+        console.log('Hello Agn');
+    </script>
+</head>
+<body>
+    
+    
+</body>
+</html>

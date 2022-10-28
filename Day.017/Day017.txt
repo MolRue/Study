@@ -1,0 +1,71 @@
+bootstrap???
+
+ - HTML, CSS, JS 라이브러리 중 하나임.
+ - 
+
+
+
+ open weather API key
+ b1e93888425bc4d1ae07038666f33882
+
+https://api.openweathermap.org/data/2.5/weather?q=seoul&appid=b1e93888425bc4d1ae07038666f33882&units=metric&lang=kr
+
+
+https://api.openweathermap.org/data/2.5/weather?
+
+appid=b1e93888425bc4d1ae07038666f33882
+&units=metric&lang=kr
+&q=seoul
+
+맨앞에는 &가 안붙는다. ? 로 시작한다.
+
+weather
+
+{
+"coord": {
+"lon": 126.9778,
+"lat": 37.5683
+},
+"weather": [
+{
+"id": 800,
+"main": "Clear",
+"description": "맑음",
+"icon": "01d"
+}
+],
+"base": "stations",
+"main": {
+"temp": 16.48,
+"feels_like": 15.78,
+"temp_min": 14.69,
+"temp_max": 17.66,
+"pressure": 1027,
+"humidity": 61
+},
+"visibility": 10000,
+"wind": {
+"speed": 1.03,
+"deg": 10
+},
+"clouds": {
+"all": 0
+},
+"dt": 1666925491,
+"sys": {
+"type": 1,
+"id": 8105,
+"country": "KR",
+"sunrise": 1666907537,
+"sunset": 1666946359
+},
+"timezone": 32400,
+"id": 1835848,
+"name": "Seoul",
+"cod": 200
+}
+
+
+1. wind 의 speed 뽑아서 콘솔에 출력
+2. dt 출력 (?)
+3. weather 의 icon 출력

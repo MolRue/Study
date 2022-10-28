@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            await: async function에서만 동작하는 await라는 특별한 문법
+            자바 스크립트는 await 키워드를 만나면 promise가 처리될 때까지 기다리고 결과를 반환.
+            promise.then보다 가독성이 좋고, 간편하게 promise의 result 값을 얻을 수 있음.
+            주의할 사항은 오직 async function 안에서만 사용가능.
+        */
+
+        async function asyncFunc() {
+            let promise = new Promise((resolve, reject) => {
+                setTimeout(() => resolve("완료!"), 2000)
+            });
+
+            let result = await promise; // 프라미스가 이행될 때까지 기다립니다.
+
+            alert(result); // "완료!"
+        }
+
+        asyncFunc();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

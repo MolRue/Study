@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@import url('./common.css');
+
+/* 메인 콘텐츠 */
+#main_content {
+    background: #D8D8D8;
+}
+
+#main_content > .forecast_pane {
+    width: 960px; 
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 15px 0;
+    background: #fff;
+}

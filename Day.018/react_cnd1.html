@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        #root p {
+            color: white;
+            font-size: 20px;
+            background-color: green;
+            text-align: center;
+            width: 200px;
+        }
+
+        #btn_plus {
+            background-color: red;
+            border: 2px solid #000;
+            font-size: 15px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <button id="btn_plus">+</button>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script>
+        // const root = document.querySelector('#root')
+        // const btn_plus = document.querySelector('#btn_plus')
+
+        // let i = 0;
+        
+        // root.innerHTML = '<p>init: 1</p>'
+        // btn_plus.addEventListener('click', () => {
+        //     root.innerHTML = `<p>init: ${i++}</p>`
+        // })
+
+        const component = {
+            message: 'init', 
+            count: 0,
+            rendor(){
+                return `<p>${this.message} : ${this.count}</p>`
+            }
+        }
+        
+        function rendor(rootElement, component) {
+            rootElement.innerHTML = component.rendor()
+        }
+        // rendor가 실행 > rootelement에 아래 함수값이 들어간다. > component 에 변수 component 값이 들어간다
+        rendor(document.querySelector('#root'), component)
+
+        const btn_plus = document.querySelector('#btn_plus')
+
+        btn_plus.addEventListener("click", () => {
+            component.message = "update"
+            component.count = component.count + 1
+
+            rendor(document.querySelector('#root'), component)
+        })
+
+        // 리엑트의 원리! 같은 느낌의 코드. 실제론 이렇게 쓰진 않는다구?
+    </script>
+</body>
+</html>

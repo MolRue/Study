@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		let output = ''
+		const size = 15
+
+		for (let i = 1; i <= size; i++) {
+			for (let j = size; j > i; j--){
+				output += ' '
+			}
+			for (let k = 0; k < 2 * i -1; k++){
+				output += '*'
+			}
+			output += '\n'
+		}
+
+		for (let i = size - 1; i > 0; i--){
+			for (let j = size; j > i; j--){
+				output += ' '
+			}
+			for (let k = 0; k < 2 * i - 1; k++){
+				output += '*'
+			}
+			output += '\n'
+		}
+ console.log(output)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

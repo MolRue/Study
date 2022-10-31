@@ -1,3 +1,4 @@
 1. banner 영역 text 위치 고정하기. 
 2. icon 영역 fontawsome 적용 하기..
 3. (이건 조별질문) header 영역이 항상 위로가게 고정하기.
+4. index.css 에 113번째 줄에 왜 불났지..???

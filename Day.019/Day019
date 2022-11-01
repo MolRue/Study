@@ -1,0 +1,79 @@
+
+
+APP.js 내용
+  // return (
+  //   // 1. JSX요소 에서는 반드시 부모요소로 감싸야 한다. 보통은 div 나 시멘틱 태그
+  //   <div>
+  //   <h1>리액트</h1>
+  //   <h2>리액트??????</h2>
+  //   </div>
+  //);}
+  // function App() {
+  //   //2. {}중괄호를 이용시 자바스크립트 표현식을 사용할수 있다.
+  //   const name = '리액트';
+  //   return (
+  //     <>
+  //     { name === '리액트 ? <h1>리액트입니다.</h1> : <h2>리액트가 아닙니다.</h2>'}
+  //     </>
+  //   )
+  // }
+  
+  // 
+  // function App(){
+  //   const name = undefined;   //false
+  //   return (
+  //     <div>{neme && '리액트'}</div>
+  //   )
+  // }
+
+  // 리액트에서 inline스타일로 CSS 적용
+  // function App(){
+  //   const name = '리액트'
+  //   const style = {
+  //     backgroundColor: 'red',
+  //     color: 'white',
+  //     fontSize: '48px'
+  //     // 리액트 에서는 CSS를 카멜스타일로 작성해야 한다.
+  //   }
+  //   return(
+  //     <div style={style}>{name}</div>
+  //   );
+  // }
+
+  // 리액트 에서 클래스 지정
+  // function App(){
+  //   const name = '리액트'
+  //   return(
+  //     <div className="react">{name}</div>
+  //   );
+  // }
+
+
+  // // 리액트 에서는 'input'태그도 닫는태그가 필요하다.
+  // function App() {
+  //   const name = '리액트'
+  //   return (
+  //     <>
+  //     <div className='react'>{name}</div>
+  //     <input></input>
+  //     </>
+  //   )
+  // }
+
+  // // 리액트에서는 주석도 모양이 독특하다.
+  // return (
+  //   <>
+  //   ↓ 밑에 중괄호에 주석모양, 어차피 단축키는 똑같다.
+  //   {/* <div className='react'>{name}</div> */}
+  //   {/* <input></input> */}
+  //   </>
+  // )
+
+
+APP.CSS 내용
+
+/* .react{
+  background: green;
+  color: whitesmoke;
+  font-size: 50px;
+} */

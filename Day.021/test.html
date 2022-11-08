@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .myStyle {
+      background-color: coral;
+      padding: 16px;
+    }
+    .anotherClass {
+      text-align: center;
+      font-size: 25px;
+    }
+    .thirdClass {
+      text-transform: uppercase;
+    }
+  </style>
+
+  <body>
+    <h1>The DOMToken Object</h1>
+    <h2>The add() Method</h2>
+
+    <button onclick="myFunction()">Add</button>
+    <p>Click "Add" to add multiple classes to myDIV.</p>
+
+    <div id="myDIV">
+      <p>I am myDIV.</p>
+    </div>
+
+    <p>
+      The classList property is not supported in Internet Explorer 9 and
+      earlier.
+    </p>
+
+    <script>
+      function myFunction() {
+        document
+          .getElementById('myDIV')
+          .classList.add('myStyle', 'anotherClass', 'thirdClass');
+      }
+    </script>
+  </body>
+</html>

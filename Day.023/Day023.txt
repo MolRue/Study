@@ -1,0 +1,12 @@
+
+News API cord
+
+6ce8bc15fc3c44c98defff9fca863ad1
+
+url 구조? port?
+
+
+
+telnet 명령어 
+
+인터넷을 통해 원격지의 호스트 컴퓨터에 연결?
